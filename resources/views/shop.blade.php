@@ -50,25 +50,8 @@
     <div class="product_page_section mb-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 order-2 order-lg-1">
-                    <div class="product_sidebar product_widget">
 
-                        <div class="widget__list category wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">
-                            <h3>categories</h3>
-                            <div class="widget_category">
-                                <ul>
-                                @foreach ($categories as $key => $category)
-                                    <li><a href="/categories/{{$category->id}}">{{$category->name}} </a></li>
-                            @endforeach
-
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="col-lg-9 order-1 order-lg-2">
+                <div class="col-lg-12 order-1 order-lg-2">
                     <div class="product_page_wrapper">
                         <!--shop toolbar area start-->
 

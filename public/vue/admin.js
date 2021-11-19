@@ -7315,6 +7315,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -72659,6 +72665,8 @@ var render = function () {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(singleItem.pickupdate))]),
                         _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(singleItem.pickuptime))]),
+                        _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(singleItem.status_name))]),
                         _vm._v(" "),
                         _c("td", [
@@ -72724,7 +72732,7 @@ var render = function () {
                           _vm._v("CUSTOMER"),
                         ]),
                         _vm._v(" "),
-                        _c("h6", [_vm._v(_vm._s(_vm.form.name))]),
+                        _c("h6", [_vm._v(_vm._s(_vm.form.customer))]),
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group" }, [
@@ -72749,6 +72757,14 @@ var render = function () {
                         ]),
                         _vm._v(" "),
                         _c("h6", [_vm._v(_vm._s(_vm.form.pickupdate))]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("label", { attrs: { for: "name" } }, [
+                          _vm._v("PICKUP TIME"),
+                        ]),
+                        _vm._v(" "),
+                        _c("h6", [_vm._v(_vm._s(_vm.form.pickuptime))]),
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "form-group mt-5" }, [
@@ -72955,6 +72971,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Placed On")]),
         _vm._v(" "),
         _c("th", [_vm._v("Pickup Date")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Pickup Time")]),
         _vm._v(" "),
         _c("th", [_vm._v("Status")]),
         _vm._v(" "),

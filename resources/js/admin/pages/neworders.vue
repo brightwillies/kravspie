@@ -53,6 +53,7 @@
                     <th>Total Cost</th>
                     <th>Placed On</th>
                     <th>Pickup Date</th>
+                    <th>Pickup Time</th>
                     <th>Status</th>
                     <th>Edit</th>
                   </tr>
@@ -65,6 +66,7 @@
                     <td>{{ singleItem.amount }}</td>
                     <td>{{ singleItem.placed_on }}</td>
                     <td>{{ singleItem.pickupdate }}</td>
+                    <td>{{ singleItem.pickuptime }}</td>
                     <td>{{ singleItem.status_name }}</td>
 
                     <td>
@@ -113,7 +115,7 @@
                 <div class="col-lg-4 col-md-4">
                   <div class="form-group">
                     <label for="name">CUSTOMER</label>
-                    <h6>{{ form.name }}</h6>
+                    <h6>{{ form.customer }}</h6>
                   </div>
                   <div class="form-group">
                     <label for="name">TELEPHONE NUMBER</label>
@@ -126,6 +128,10 @@
                   <div class="form-group">
                     <label for="name">PICKUP DATE</label>
                     <h6>{{ form.pickupdate }}</h6>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">PICKUP TIME</label>
+                    <h6>{{ form.pickuptime }}</h6>
                   </div>
 
                       <div class="form-group mt-5">

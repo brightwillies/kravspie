@@ -128,7 +128,7 @@
                     <article class="single_product">
                         <figure>
                             <div class="product_thumb">
-                                <a href="/products/{{$Sproduct->id}}"><img  height="330px"  src="{{$Sproduct->image}}" alt=""></a>
+                                <a href="/products/{{$Sproduct->id}}"><img  height="330px" id="offimage"   src="{{$Sproduct->image}}" alt=""></a>
                                 <div class="action_links">
                                     <ul class="d-flex justify-content-center">
                                         <li class="add_to_cart"><a onclick="event.preventDefault(); cart.add({{$Sproduct->id}}, '1');" href="#" title="Add to cart"> <span

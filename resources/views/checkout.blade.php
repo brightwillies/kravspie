@@ -24,6 +24,7 @@
             const _token = this['token'].value;
             const famount = this['amountt'].value;
             const dayy = this['pickupdate'].value;
+            const pickuptime = this['pickuptime'].value;
             const items = this['items'].value;
 
             const body = JSON.stringify({
@@ -31,6 +32,7 @@
                 sourceId: token,
                 amount: famount,
                 pickupdate : dayy,
+                pickuptime : pickuptime,
                 items : items,
                 _token : _token
             });
@@ -215,7 +217,7 @@
                                         <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 <p class="mb-3">
-                                                    Place the order Only If You Can Pickup Locally From the <a target="_blank" href="https://g.page/DFMDallasFarmersMarket_?share"><b>Dallas Farmers Market, on Saturdays 10am - 3pm. </b> </a>
+                                                    Place the order Only If You Can Pickup Locally From the <a target="_blank" href="https://g.page/DFMDallasFarmersMarket_?share"><b>Dallas Farmers Market, on Saturdays 10am - 3:30pm. </b> </a>
                                                 </p>
                                             </div>
                                         </div>
@@ -232,6 +234,25 @@
                                                     </select>
                                                 </div>
                                             </div> <br>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label for="pickupdate">Choose Pickup Time:</label><br>
+
+                                                    <select class="custom-select" name="timedate" id="pickuptime">
+                                                        <option style="width: 100%;" value="10:00-10:30">10:00-10:30</option>
+                                                        <option style="width: 100%;" value="10:30-11:00">10:30-11:00</option>
+                                                        <option style="width: 100%;" value="11:00-11:30">11:00-11:30</option>
+                                                        <option style="width: 100%;" value="11:30-12:00">11:30-12:00</option>
+                                                        <option style="width: 100%;" value="12:00-12:30">12:00-12:30</option>
+                                                        <option style="width: 100%;" value="12:30-13:00">12:30-13:00</option>
+                                                        <option style="width: 100%;" value="13:00-13:30">13:00-13:30</option>
+                                                        <option style="width: 100%;" value="13:30-14:00">13:30-14:00</option>
+                                                        <option style="width: 100%;" value="14:00-14:30">14:00-14:30</option>
+                                                        <option style="width: 100%;" value="14:30-15:00">14:30-15:00</option>
+                                                        <option style="width: 100%;" value="15:00-15:30">15:00-15:30</option>
+                                                    </select>
+                                                </div>
+                                            </div><br>
                                             <div id="card-container"></div>
                                             <div class="order-button-payment">
                                                 <button id="card-button" style="width: 100%;" class="btn btn-primary" type="button">Pay ${{number_format($cartSum, 2, '.', '')}}</button>
@@ -257,7 +278,7 @@
                 </div>
 
                 <div class="col-lg-6 col-12">
-             <img src="/assets/img/bg/bg.jpg" alt="">
+             <img src="/assets/img/bg/bgg.jpg" alt="">
                 </div>
             </div>
         </div>

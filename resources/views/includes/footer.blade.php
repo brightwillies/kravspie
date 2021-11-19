@@ -9,7 +9,7 @@
                             </div> -->
                             <div class="shipping_text">
                                 <h3>For Nationwide Shipping</h3>
-                                <p>Order on Podbelly</p>
+                                <p> <a target="_blank" href="https://www.goldbelly.com/kravs-pie"> Order on GOLDBELLY </a></p>
                             </div>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
                             </div> -->
                             <div class="shipping_text">
                                 <h3>Pickups on Saturdays</h3>
-                                <p>10:00am - 3:00pm</p>
+                                <p>10:00am - 3:30pm</p>
                             </div>
                         </div>
                     </div>

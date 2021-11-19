@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
             $table->date('placed_on')->nullable();
             $table->string('mask');
             $table->string('pickupdate')->nullable();
+            $table->string('pickuptime')->nullable();
             $table->integer('status')->default(0);
             $table->date('date_of_delivery')->nullable();
             $table->timestamps();

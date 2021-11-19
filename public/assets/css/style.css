@@ -843,9 +843,12 @@ textarea:-ms-input-placeholder {
     margin-bottom: 12px;
   }
 }
+.offimage{
+    height: 330px  !important;
+}
 .welcome_text p {
-  font-size: 15px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 27px;
   font-weight: 500;
    color: white;
   /* color: #cfd4df; */
@@ -2002,7 +2005,7 @@ textarea:-ms-input-placeholder {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  height: 520px;
+  height: 700px;
   position: relative;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -5138,7 +5141,7 @@ textarea:-ms-input-placeholder {
 }
 .product_thumb img {
   width: 100%;
-  height: 375px;
+  /* height: 375px; */
 }
 
 .slick_navigation > button {

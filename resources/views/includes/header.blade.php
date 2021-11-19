@@ -34,9 +34,11 @@
                     <div class="col-12">
                         <div class="header_top_inner d-flex justify-content-between">
                             <div class="welcome_text">
-                                <p> Only Order on this website if you can pickup At Dallas Market on Saturdays from 10:00am to 3:30pm
-                            </p>
+
+
+                            <p  class="text-center">Attention Shoppers: Nationwide Shipping Only through GOLDBELLY Website! Preorder On Website Only If You Can Pickup Locally From the Dallas Farmers Market, on Saturdays 10am - 3:30pm.</p>
                             </div>
+
                             <div class="header_top_sidebar d-flex align-items-center">
                                 <ul class="d-flex">
                                     <li><i class="icofont-phone"></i> <a href="tel:+4693644405">+14693644405</a>
@@ -71,9 +73,9 @@
 
                                     <li><a    class="{{ (request()->is('/')) ? 'active' : '' }}"   class="active" href="/">Home</a></li>
                                     <li><a  class="{{ (request()->is('about-us')) ? 'active' : '' }}" href="/about-us">About</a></li>
-                                    <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Shop</a></li>
+                                    <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Weekend Pre-Order</a></li>
                                     <li><a class="{{ (request()->is('contact-us')) ? 'active' : '' }}"  href="/contact-us">Contact</a></li>
-                                    <li><a target="_blank" href="http://voyagedallas.com/interview/check-joseline-ballards-story/">In the news</a></li>
+
                                     <li><a  target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0">NationWide Delivery</a></li>
 
                                 </ul>

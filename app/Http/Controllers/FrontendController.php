@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Mail\PurchaseConfirmation;
 use App\Models\Cart;
-use App\Models\Customer;
 use App\Models\Category;
+use App\Models\Customer;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
@@ -20,7 +20,8 @@ use stdClass;
 
 class FrontendController extends Controller
 {
-    public function categoryproducts($id){
+    public function categoryproducts($id)
+    {
         $products = Product::where('category_id', $id)->get();
         $categories = Category::all();
 
@@ -67,6 +68,7 @@ class FrontendController extends Controller
         $findCustomer = Customer::where('mask', $customerSessionID)->first();
 
         $pickupdate = $request->pickupdate;
+        $pickuptime = $request->pickuptime;
 
         $amount = $request->amount;
         $client = new SquareClient([
@@ -93,6 +95,7 @@ class FrontendController extends Controller
             $newOrder->customer_id = $customerSessionID;
             $newOrder->number_of_items = count($items);
             $newOrder->pickupdate = $pickupdate;
+            $newOrder->pickuptime = $pickuptime;
             $newOrder->amount = $amount;
             $newOrder->placed_on = gmdate('Y-m-d H:i:s');
             $newOrder->mask = generate_mask();
@@ -131,7 +134,7 @@ class FrontendController extends Controller
 
                 try {
 
-                $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
+                    $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
 
                 } catch (\Throwable $th) {
                     throw $th;
