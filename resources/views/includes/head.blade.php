@@ -6,16 +6,18 @@
     <link rel="canonical" href="www.kravspie.com" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+	<meta name="description" content="KRAVS Pie now ships our gourmet made from scratch pies and kube snack nationwide on Goldbelly – straight from McKinney, TX to your door. Guaranteed to arrive fresh. Shop now!" />
 
     <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="KravsPie />
+    <meta property="og:title" content="Kravs Pie />
     <meta property="og:url" content="PAGE_URL" />
-    <meta property="og:site_name" content="KravsPie" />
+    <meta property="og:site_name" content="KravsP ie" />
     <!-- For the og:image content, replace the # with a link of an image -->
     <meta property="og:image" content="#" />
-    <meta property="og:description" content="KravsPie" />
+    <meta property="og:description" content="KRAVS Pie now ships our gourmet made from scratch pies and kube snack nationwide on Goldbelly – straight from McKinney, TX to your door. Guaranteed to arrive fresh. Shop now!" />
+
 
     <!-- Add site Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png">
