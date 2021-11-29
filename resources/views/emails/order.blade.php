@@ -229,7 +229,7 @@
                       "
                     >
                       Thank you <br />
-                      Your order successfully <br />
+                      Your order has successfully <br />
                       been placed
                     </p>
 
