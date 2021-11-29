@@ -65,6 +65,9 @@
                 <li>
                   <a href="/admin-dashboard/categories">Categories</a>
                 </li>
+                <li>
+                  <a href="/admin-dashboard/custom-date">Pickup Dates</a>
+                </li>
 
               </ul>
             </li>

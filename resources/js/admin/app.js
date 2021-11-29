@@ -91,6 +91,7 @@ import neworders from "./pages/neworders.vue";
 import oldorders from "./pages/oldorders.vue";
 import Customers from "./pages/Customers.vue";
 import Category from "./pages/Category.vue";
+import CustomDate from "./pages/CustomDate.vue";
 
 Vue.component('sidebar', Sidebar);
 
@@ -169,6 +170,11 @@ const router = new VueRouter({
                     path: "categories",
                     name: "category",
                     component: Category
+                },
+                {
+                    path: "custom-date",
+                    name: "custom-date",
+                    component: CustomDate
                 },
                 {
                     path: "customers",

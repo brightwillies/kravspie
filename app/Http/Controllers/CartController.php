@@ -61,6 +61,7 @@ class CartController extends Controller
                 $tempCart->product_id = $product_id;
                 $tempCart->quantity = $quantity;
                 $tempCart->save();
+                $message = $findProduct->name . "'s has been added to cart";
             }
 
         } elseif (isset($tempid)) {
@@ -167,5 +168,5 @@ class CartController extends Controller
 
     }
 
-    
+
 }

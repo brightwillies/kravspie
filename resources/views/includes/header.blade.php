@@ -7,15 +7,15 @@
                             <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
                         </div>
                         <div class="welcome_text text-center">
-                            <p>Welcome to KravPie</p>
+                            <p>Welcome to KravsPie</p>
                         </div>
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
 
                                 <li><a class="active" href="/">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="about.html">All items</a></li>
-                                <li><a href="about.html">In the news</a></li>
+                                <li><a href="/about-us">About Us</a></li>
+                                <li><a href="/shop">Weekends Pre-Order</a></li>
+
                                 <li class="menu-item-has-children"><a href="/contact-us">Contact Us</a></li>
                             </ul>
                         </div>
@@ -46,7 +46,7 @@
 
                                     <li class="account_link"> <i class="icofont-user-alt-7"></i><a href="#">Account</a>
                                         <ul class="dropdown_account_link">
-                                            <li><a href="/my-account">My Account</a></li>
+                                            <!-- <li><a href="/my-account">My Account</a></li> -->
                                             <li><a href="/login-register">Login</a></li>
                                             <li><a href="/logout">Logout</a></li>
 
@@ -84,10 +84,10 @@
                         <!--main menu end-->
                         <div class="header_account">
                             <ul class="d-flex">
-                                <li class="header_search"><a href="javascript:void(0)"><i class="pe-7s-search"></i></a>
-                                </li>
+                                <!-- <li class="header_search"><a href="javascript:void(0)"><i class="pe-7s-search"></i></a>
+                                </li> -->
 
-                                <li class="shopping_cart"><a href="javascript:void(0)"><i class="pe-7s-shopbag"></i></a>
+                                <li class="shopping_cart"><a href="javascript:void(0)"><i class="pe-7s-cart"></i></a>
                                     <span id="totalqnt"  class="item_count">{{$cart_total}}</span>
                                 </li>
                             </ul>

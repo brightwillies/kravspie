@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 <style>
     .backcolor{
-        background: beige;
+        /* background: beige; */
+        /* font-family: Quando"; */
+        font-weight: 800;
+        font-family: "Quando";
+        text-shadow: 0px -2px 0px #ffffff;
     }
 
 .product_thumb img {
@@ -49,16 +53,17 @@
         <div class="container">
             <div class="hero_banner_inner">
                 <div class="row align-items-center">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
                         <div class="hero_content hero_content2">
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
                             <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> Not Your Average Pie</h1>
-                            <h4 class="text-center  backcolor">The proof is in the crust !</h4>
+                            <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4>
                             <a id="shopbutton" style="margin-top:40px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/shop">Shop Now</a>
                         </div>
                     </div>
+                    <div class="col-lg-1"></div>
                 </div>
             </div>
         </div>
@@ -77,7 +82,7 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p>We use real butter and the finest quality ingredients to bake pies that are addictive. Pies are flaky on the outside, full on the inside, yummy all the way.</p>
+                    <p style="font-weight: 600;">We use real butter and the finest quality ingredients to bake pies that are addictive. Pies are flaky on the outside, full on the inside, yummy all the way.</p>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -169,6 +174,31 @@
     </div>
     <!-- testimonial section start -->
 
+    <div class="container">
+    <div class="row" style="margin-bottom: 20px;">
+    <div class="col-12 text-center">
+                    <h1>In The News</h1>
+                </div>
+        <div class="col-lg-4 col-sm-12">
+            <a href="https://www.dallasnews.com/food/restaurant-news/2021/07/12/dallas-based-ghanaian-bakers-pie-shop-tells-a-story-of-west-africa/">
+            <img src="/assets/img/bg/news1.png" alt="">
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+        <a href="https://vegoutmag.com/food-and-drink/10-vegan-desserts-you-need-to-try-on-goldbelly">
+            <img src="/assets/img/bg/news2.png" alt="">
+
+        </a>
+        </div>
+        <div class="col-lg-4 col-sm-12">
+        <a href="http://voyagedallas.com/interview/check-joseline-ballards-story/">
+            <img src="/assets/img/bg/news3.png" alt="">
+
+        </a>
+        </div>
+
+    </div>
+    </div>
     <!-- testimonial section end -->
 
 

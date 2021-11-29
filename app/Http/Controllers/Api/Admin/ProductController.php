@@ -52,7 +52,7 @@ class ProductController extends Controller
             'name' => 'required',
             'price' => 'required',
             'status' => 'required',
-            'category_id' => 'required',
+            // 'category_id' => 'required',
         ];
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
@@ -62,8 +62,9 @@ class ProductController extends Controller
         $newRecord = new Product();
         $newRecord->name = $request->name;
         $newRecord->status = (int) $request->status;
+        $newRecord->featured = (int) $request->featured;
         $newRecord->price = $request->price;
-        $newRecord->category_id = $request->category_id;
+        // $newRecord->category_id = $request->category_id;
         $newRecord->description = $request->description;
         $newRecord->mask = generate_mask();
         $webImage = $request->file('featured_image');
@@ -109,9 +110,10 @@ class ProductController extends Controller
         $newRecord = Product::where('mask', $id)->first();
         $newRecord->name = $request->name;
         $newRecord->status = (int) $request->status;
+        $newRecord->featured = (int) $request->featured;
         $newRecord->price = $request->price;
         $newRecord->description = $request->description;
-        $newRecord->category_id = $request->category_id;
+        // $newRecord->category_id = $request->category_id;
 
         $webImage = $request->file('featured_image');
         if ($webImage) {

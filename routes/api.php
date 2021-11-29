@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\Api\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Api\Admin\CategoryController;
+use App\Http\Controllers\Api\Admin\CDateController;
 use App\Http\Controllers\Api\Admin\OrderController;
 use App\Http\Controllers\Api\Admin\ProductController;
-use App\Http\Controllers\Api\Admin\CategoryController;
 use App\Http\Controllers\Api\Admin\UserController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,6 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/stats', [ProductController::class, 'statistics']);
         Route::group(['prefix' => 'usermanagement'], function () {
 
-
             Route::group(['prefix' => 'admin'], function () {
                 Route::get('/', [UserController::class, 'indexAdmin']);
                 Route::post('/', [UserController::class, 'storeAdmin']);
@@ -48,6 +48,13 @@ Route::group(['prefix' => 'v1'], function () {
             Route::post('/update/{id}', [OrderController::class, 'updateOrder']);
         });
 
+        Route::group(['prefix' => 'cdate'], function () {
+            Route::get('/', [CDateController::class, 'index']);
+            Route::get('/{id}', [CDateController::class, 'show']);
+            Route::post('/', [CDateController::class, 'store']);
+            Route::post('/{id}', [CDateController::class, 'update']);
+            Route::delete('/{id}', [CDateController::class, 'destroy']);
+        });
         Route::group(['prefix' => 'categories'], function () {
             Route::get('/', [CategoryController::class, 'index']);
             Route::get('/{id}', [CategoryController::class, 'show']);

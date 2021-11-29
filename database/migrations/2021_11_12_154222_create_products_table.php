@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('image')->nullable();
             $table->string('image_filename')->nullable();
             $table->integer('category_id')->default(0)->nullable();
+            $table->integer('featured')->nullable()->default(0);
             $table->string('mask');
             $table->timestamps();
         });

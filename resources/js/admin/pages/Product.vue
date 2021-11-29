@@ -87,7 +87,7 @@
 
                   <div class="form-group mt-5">
                     <div class="row">
-                      <div class="col-lg-2">
+                      <div class="col-lg-3">
                         <h5 class="font-size-14">Status</h5>
                       </div>
                       <div class="col-lg-2">
@@ -123,7 +123,45 @@
                     </div>
                   </div>
 
-                  <div class="form-group row">
+                  <div class="form-group mt-5">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h5 class="font-size-14">Featured Product</h5>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="form-check">
+                          <input
+                            v-model="form.featured"
+                            class="form-check-input"
+                            type="radio"
+                            name="featured"
+                            id="featured1"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="featured1">
+                            Yes
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="form-check">
+                          <input
+                            v-model="form.featured"
+                            class="form-check-input"
+                            type="radio"
+                            name="featured"
+                            id="featured2"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="featured2">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="form-group row">
                     <label class="col-md-4 col-form-label"
                       >Select Category</label
                     >
@@ -137,7 +175,7 @@
                         :reduce="(name) => name.id"
                       ></v-select>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="col-lg-6" style="height: 500px">
                   <quill-editor
@@ -272,6 +310,7 @@ export default {
         description: "",
         category_id: "",
         status: "",
+        featured: "",
         mask: "",
         featured_image: "",
       }),
@@ -342,7 +381,8 @@ export default {
       formData.append("price", this.form.price);
       formData.append("description", this.form.description);
       formData.append("status", this.form.status);
-      formData.append("category_id", this.form.category_id);
+      formData.append("featured", this.form.featured);
+      //   formData.append("category_id", this.form.category_id);
       formData.append("featured_image", this.form.featured_image);
       axios
         .post("/api/v1/admin/product", formData, {
@@ -380,6 +420,7 @@ export default {
       formData.append("price", this.form.price);
       formData.append("description", this.form.description);
       formData.append("status", this.form.status);
+      formData.append("featured", this.form.featured);
       formData.append("category_id", this.form.category_id);
       formData.append("featured_image", this.form.featured_image);
       axios

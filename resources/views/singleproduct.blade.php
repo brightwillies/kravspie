@@ -6,6 +6,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bucker – Single Product </title>
     @include('includes.head')
+
+    <style>
+        .product_thumb img {
+    width: 100%;
+    height: 250px !important;
+}
+    </style>
 </head>
 
 <body>
@@ -83,9 +90,9 @@
                         {!!$product->description!!}
                         </p>
                         <div class="product_pro_button quantity d-flex align-items-center">
-                            <div class="pro-qty border">
+                            <!-- <div class="pro-qty border">
                                 <input type="text" value="1">
-                            </div>
+                            </div> -->
                             <a  onclick="event.preventDefault(); cart.add({{$product->id}}, '1');" class="add_to_cart " href="#">add to cart</a>
 
 
@@ -128,7 +135,7 @@
                     <article class="single_product">
                         <figure>
                             <div class="product_thumb">
-                                <a href="/products/{{$Sproduct->id}}"><img  height="330px" id="offimage"   src="{{$Sproduct->image}}" alt=""></a>
+                                <a href="/products/{{$Sproduct->id}}"><img   height="330px" id="offimage"   src="{{$Sproduct->image}}" alt=""></a>
                                 <div class="action_links">
                                     <ul class="d-flex justify-content-center">
                                         <li class="add_to_cart"><a onclick="event.preventDefault(); cart.add({{$Sproduct->id}}, '1');" href="#" title="Add to cart"> <span

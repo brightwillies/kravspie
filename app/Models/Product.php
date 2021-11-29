@@ -7,11 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     //
-    protected $appends = ['status_name', 'category'];
+    protected $appends = ['status_name', 'feature', 'category'];
 
+    public function getFeatureAttribute()
+    {
+        $featured = 'No';
+        $getStatus = $this->featured;
+
+        if ($getStatus == 1) {
+            $featured = 'Yes';
+        }
+
+        return $this->attributes['feature'] = $featured;
+    }
     public function getcategoryAttribute()
     {
-        $category = '';
+        $category = 'General';
         $getStatus = $this->category_id;
 
         $getRecord = Category::find($getStatus);

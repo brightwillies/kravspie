@@ -517,6 +517,7 @@ class ComposerStaticInitaf56081924a3b6a61b5d19fcc07d13ea
     public static $classMap = array (
         'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Customdate' => __DIR__ . '/../..' . '/app/Customdate.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Api\\Admin\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/AuthController.php',
         'App\\Http\\Controllers\\Api\\Admin\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/CategoryController.php',

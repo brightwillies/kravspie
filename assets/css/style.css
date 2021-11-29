@@ -28,6 +28,18 @@
           box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Quando");
+
+
+@font-face {
+    font-family: 'Quando';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Quando-Regular.ttf'); /* IE9 Compat Modes */
+    /* src: url('../fonts/libre-franklin-v7-latin-regular.eot'); */
+    /* IE9 Compat Modes */
+
+        }
 /*----------------------------------------*/
 /*  01. Theme default CSS
 /*----------------------------------------*/

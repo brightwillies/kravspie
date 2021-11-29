@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customdate;
 use App\Mail\PurchaseConfirmation;
 use App\Models\Cart;
 use App\Models\Category;
@@ -40,7 +41,7 @@ class FrontendController extends Controller
     {
 
         $product = Product::find($id);
-        $products = Product::all();
+        $products = Product::where('id', '<>', $id)->get()->take(4);
         return view('singleproduct', compact('product', 'products'));
     }
     public function about()
@@ -151,7 +152,7 @@ class FrontendController extends Controller
 
     public function index()
     {
-        $products = Product::all()->take(3);
+        $products = Product::where('featured', 1)->get()->take(3);
         return view('welcome', compact('products'));
     }
     public function cart()
@@ -194,6 +195,17 @@ class FrontendController extends Controller
         //  return   Cart::where('customer_id', $temporalShoppingID)->orWhere('customer_id', $customerSessionID)->get();
 
         $days = array();
+
+        $getDates = Customdate::all();
+
+        if($getDates->isNotEmpty()){
+            foreach ($getDates as $key => $singDate) {
+
+            $days[] =  $singDate->month. " ". $singDate->number;
+
+            }
+        }
+
         $startdate = strtotime("Saturday");
         $enddate = strtotime("+6 weeks", $startdate);
         while ($startdate < $enddate) {

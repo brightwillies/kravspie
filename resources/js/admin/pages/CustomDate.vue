@@ -12,14 +12,14 @@
               justify-content-between
             "
           >
-            <h4 class="page-title mb-0 font-size-18">All Products</h4>
+            <h4 class="page-title mb-0 font-size-18">Custom Pickup Date</h4>
 
             <div class="page-title-right">
               <ol class="breadcrumb m-0">
                 <li class="breadcrumb-item">
-                  <a href="/admin-dashboard">Dashboard</a>
+                  <a href="/dashboard">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item active">All Products</li>
+                <li class="breadcrumb-item active">Custom Pickup Date</li>
               </ol>
             </div>
           </div>
@@ -31,15 +31,12 @@
           <div class="col-lg-9"></div>
 
           <div class="col-lg-3 align-self-center">
-            <router-link
-              :to="{
-                name: 'product',
-              }"
+            <button
+              class="btn btn-primary btn-block mb-3"
+              @click="showNewModal"
             >
-              <button class="btn btn-primary btn-block mb-3">
-                Add New Product
-              </button>
-            </router-link>
+              Add New Pickup Date
+            </button>
           </div>
         </div>
       </div>
@@ -58,43 +55,30 @@
               >
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Featured</th>
-                    <th>Price</th>
-                    <th>Status</th>
+                    <th>Day</th>
+                    <th>Month</th>
                     <th>Edit</th>
                     <th>Delete</th>
                   </tr>
                 </thead>
+
                 <tbody>
                   <tr v-for="singleItem in tableData" :key="singleItem.id">
-                    <td>{{ singleItem.name }}</td>
-                    <td>{{ singleItem.category }}</td>
-                    <td>{{ singleItem.feature }}</td>
-                    <td>{{ singleItem.price}}</td>
-                    <td>{{ singleItem.status_name }}</td>
+                    <td>{{ singleItem.number }}</td>
+                    <td>{{ singleItem.month }}</td>
 
                     <td>
-                      <router-link
-
-                        :to="{
-                          name: 'ViewProduct',
-                          params: { id: singleItem.mask },
-                        }"
+                      <button
+                        class="btn"
+                        type="button"
+                        @click="launchEditModal(singleItem)"
                       >
-                        <button
-                          class="btn btn-primary"
-                          type="button"
-
-                        >
-                          <i class="bx bx-edit-alt"></i>
-                        </button>
-                      </router-link>
+                        <i class="bx bx-edit-alt"></i>
+                      </button>
                     </td>
                     <td>
                       <button
-                        class="btn btn-danger"
+                        class="btn"
                         type="button"
                         @click="showDeleteModal(singleItem)"
                       >
@@ -119,7 +103,7 @@
       aria-labelledby="myLargeModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <h5
@@ -127,14 +111,14 @@
               class="modal-title mt-0"
               id="myLargeModalLabel"
             >
-              Add Articles Category's Details
+              Add Pickup Date
             </h5>
             <h5
               v-show="editmode"
               class="modal-title mt-0"
               id="myLargeModalLabel"
             >
-              Update Article Category's Details
+              Update Pickup Date
             </h5>
             <button
               type="button"
@@ -151,72 +135,78 @@
               <div class="row">
                 <div class="col-lg-12 col-md-12">
                   <div class="form-group">
-                    <label for="name">name</label>
-                    <input
-                      required
-                      v-model="form.name"
-                      type="text"
-                      id="name"
-                      name="group-a[0][untyped-input]"
+                    <label for="name">Day</label>
+                    <select
+                      v-model="form.number"
+                      id="ddob"
+                      name="ddob"
                       class="form-control"
-                    />
+                    >
+                      <option value="01">1</option>
+                      <option value="02">2</option>
+                      <option value="03">3</option>
+                      <option value="04">4</option>
+                      <option value="05">5</option>
+                      <option value="06">6</option>
+                      <option value="07">7</option>
+                      <option value="08">8</option>
+                      <option value="09">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
                   </div>
-
                   <div class="form-group">
-                    <label for="name">Description</label>
-                    <input
-                      required
-                      v-model="form.description"
-                      type="text"
-                      id="name"
-                      name="postion"
+                    <label for="name">Month</label>
+                    <select
+                    v-model="form.month"
+                      required=""
+                      id="mdob"
+                      name="mdob"
                       class="form-control"
-                    />
+                    >
+                      <option value="Jan">January</option>
+                      <option value="Feb">February</option>
+                      <option value="Mar">March</option>
+                      <option value="Apr">April</option>
+                      <option value="May">May</option>
+                      <option value="Jun">June</option>
+                      <option value="Jul">July</option>
+                      <option value="Aug">August</option>
+                      <option value="Sep">September</option>
+                      <option value="Oct">October</option>
+                      <option value="Nov">November</option>
+                      <option value="Dec">December</option>
+                    </select>
                   </div>
 
-                  <div class="form-group mt-5">
-                    <div class="row">
-                      <div class="col">
-                        <h5 class="font-size-14">Status</h5>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input
-                            v-model="form.status"
-                            class="form-check-input"
-                            type="radio"
-                            name="exampleRadios"
-                            id="exampleRadios1"
-                            value="1"
-                          />
-                          <label class="form-check-label" for="exampleRadios1">
-                            Active
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-check">
-                          <input
-                            v-model="form.status"
-                            class="form-check-input"
-                            type="radio"
-                            name="exampleRadios"
-                            id="exampleRadios2"
-                            value="0"
-                          />
-                          <label class="form-check-label" for="exampleRadios2">
-                            Inactive
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
                 </div>
 
                 <div class="col-lg-12">
                   <button class="btn btn-primary btn-block mb-3" type="submit">
-                    <span v-show="!editmode">Add New Article Category</span>
-                    <span v-show="editmode">Update Article Category</span>
+                    <span v-show="!editmode">Add New Pickup Date</span>
+                    <span v-show="editmode">Update Pickup Date</span>
                   </button>
                 </div>
               </div>
@@ -253,8 +243,11 @@
           </div>
           <div class="modal-body">
             <p>
-              Are you sure you want to remove
-              <strong> {{ selectedItem.name }}</strong> ?
+              Are you sure you want to remove date (<strong>
+                {{ selectedItem.number }}
+                {{ selectedItem.month }}
+              </strong>
+              ) ?
             </p>
           </div>
           <div class="modal-footer">
@@ -274,37 +267,28 @@
       </div>
       <!-- /.modal-dialog -->
     </div>
-
-
-
   </div>
 </template>
+
 
 <script>
 import axios from "axios";
 import Form from "vform";
 import { mixin } from "../mixin";
 
-import "vue-select/dist/vue-select.css";
-
-import vSelect from "vue-select";
 export default {
-  components: {
-    vSelect,
-  },
   mixins: [mixin],
   data() {
     return {
       selectedItem: "",
-      imageAvatar: null,
+      selectedItems: null,
+
       required: true,
       editmode: false,
       tableData: [],
-      roles: [],
       form: new Form({
-        name: "",
-        description: "",
-        status: "",
+        number: "",
+        month: "",
         mask: "",
       }),
     };
@@ -315,7 +299,6 @@ export default {
   },
 
   methods: {
-
     initDatatable() {
       setTimeout(() => {
         $("#datatable-buttons").DataTable({
@@ -339,7 +322,7 @@ export default {
 
     getRecords() {
       axios
-        .get("/api/v1/admin/product")
+        .get("/api/v1/admin/cdate")
         .then(({ data }) => {
           this.tableData = data.data;
           this.initDatatable();
@@ -349,7 +332,39 @@ export default {
         });
     },
 
+    updateRecord() {
+      var vm = this;
+      let formData = new FormData();
+      formData.append("number", this.form.number);
+      formData.append("month", this.form.month);
+      axios
+        .post("/api/v1/admin/cdate/" + this.form.mask, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then(
+          (response) => {
+            if (response) {
+              const res = response.data;
 
+              if (res.code === 200) {
+                this.successToastReloadPage(res.message);
+              } else {
+              }
+            }
+          },
+          function (error) {
+            if (error.response) {
+              console.log(error.response.data.errors);
+              error.response.data.errors.forEach((element) => {
+                vm.$toasted.show(element);
+              });
+              // alert(error.response.status);
+            }
+          }
+        );
+    },
     showNewModal() {
       this.form.reset();
       this.editmode = false;
@@ -364,26 +379,55 @@ export default {
     launchEditModal(record) {
       this.form.reset();
       this.editmode = true;
-      this.imageAvatar = record.image;
+      this.required = false;
       this.form.fill(record);
       $("#newRecordModal").modal().show();
     },
+    saveRecord() {
+      var vm = this;
+      let formData = new FormData();
+      formData.append("number", this.form.number);
+      formData.append("month", this.form.month);
 
+      axios
+        .post("/api/v1/admin/cdate", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
+        .then(
+          (response) => {
+            if (response) {
+              const res = response.data;
+
+              if (res.code === 200) {
+                this.successToastReloadPage(res.message);
+              } else {
+              }
+            }
+          },
+          function (error) {
+            if (error.response) {
+              console.log(error.response.data.errors);
+              error.response.data.errors.forEach((element) => {
+                vm.$toasted.show(element);
+              });
+              // alert(error.response.status);
+            }
+          }
+        );
+    },
 
     deleteRecord() {
       var vm = this;
       let formData = new FormData();
 
       axios
-        .delete(
-          "/api/v1/admin/room/" + this.selectedItem.mask,
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        )
+        .delete("/api/v1/admin/cdate/" + this.selectedItem.mask, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        })
         .then(
           (response) => {
             if (response) {

@@ -1,7 +1,6 @@
 
 "use strict"
 
-
 var cart = {
 
     'add': function (product_id, quantity) {

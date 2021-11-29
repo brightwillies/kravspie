@@ -20,7 +20,7 @@ if (!function_exists("deleteItemOldImage")) {
     function deleteOldImage($filename, $folder)
     {
         $path = "/" . $folder . "/" . $filename;
-        File::delete(public_path($path));
+        File::delete(($path));
     }
 }
 
@@ -30,7 +30,7 @@ if (!function_exists("uploadItemImage")) {
         $extension = $file->getClientOriginalExtension();
         $originalName = Str::slug($name) . $subfix;
         $imageName = $originalName . '.' . $extension;
-        $file->move(public_path($folder), $imageName);
+        $file->move(($folder), $imageName);
         // Storage::disk('uploads')->put($imageName,$file);
         $url = url('/');
         $path = $url . '/' . $folder . '/' . $imageName;
