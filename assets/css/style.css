@@ -6874,6 +6874,10 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     margin-top: 90px;
     color : black !important;
   }
+
+  .backcolor{
+      font-size: 1.3rem !important;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
