@@ -851,7 +851,7 @@ textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 767px) {
   .welcome_text {
-    display: none;
+    /* display: none; */
     margin-bottom: 12px;
   }
 }
@@ -872,7 +872,10 @@ textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 767px) {
   .welcome_text p {
-    color: #000000;
+    color: white !important;
+    font-size: 11px !important;
+    font-weight: 500px;
+    line-height: 23px !important;
   }
 }
 
@@ -938,7 +941,9 @@ textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 575px) {
   .header_top_sidebar > ul > li > a {
-    line-height: 33px;
+    line-height: 10px;
+    font-size: 10px !important;
+    margin-top: -10px;
   }
 }
 
