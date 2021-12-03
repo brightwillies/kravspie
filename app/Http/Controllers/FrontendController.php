@@ -72,8 +72,12 @@ class FrontendController extends Controller
         $pickuptime = $request->pickuptime;
 
         $amount = $request->amount;
+        // $client = new SquareClient([
+        //     'accessToken' => 'EAAAEHysWwv1SNJvAja_QgpsBvmHDpg9PLgrX1Sztx1XRvELCpvMiI62ivo6JDHb',
+        //     'environment' => Environment::SANDBOX,
+        // ]);
         $client = new SquareClient([
-            'accessToken' => 'EAAAEHysWwv1SNJvAja_QgpsBvmHDpg9PLgrX1Sztx1XRvELCpvMiI62ivo6JDHb',
+            'accessToken' => 'EAAAFNoXBzoso8gSvI0LigwNpVF9veOak-n1x4wAUitcMWflkymJCWcLXlveKXao',
             'environment' => Environment::SANDBOX,
         ]);
         $amount_money = new \Square\Models\Money();

@@ -36,7 +36,7 @@
                             <div class="welcome_text">
 
 
-                            <p  class="text-center">Attention Shoppers: Nationwide Shipping Only through GOLDBELLY Website! Preorder On Website Only If You Can Pickup Locally From the Dallas Farmers Market, on Saturdays 10am - 3:30pm.</p>
+                            <p  class="text-center">Attention Shoppers: Nationwide Shipping Only through GOLDBELLY Website! Preorder On Website Only If You Can Pickup Locally From the <a target="_blank"  style="color:#302020;" href="https://g.page/DFMDallasFarmersMarket_?share">Dallas Farmers Market</a>  , on Saturdays 10am - 3:30pm.</p>
                             </div>
 
                             <div class="header_top_sidebar d-flex align-items-center">

@@ -100,8 +100,8 @@
                             <h3>enquiry</h3>
                             <div class="footer_newsletter">
                                 <div class="newsletter_desc">
-                                    <p>If you have any question.please
-                                        <a href="/contact-us">Send Us a Email</a>
+                                    <p>
+                                        <a href="/contact-us">Kindly send us an email if you have have any questions.</a>
                                     </p>
                                 </div>
                                 <a href="https://www.facebook.com/kravspie">

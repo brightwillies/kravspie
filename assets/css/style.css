@@ -2038,12 +2038,13 @@ textarea:-ms-input-placeholder {
 @media only screen and (max-width: 767px) {
 
     .hero_banner_section {
-    height: 130px;
+    /* height: 130px; */
+    height: 200px;
   }
   #shopbutton {
-      visibility: hidden !important;
-      /* margin-top: 30px !important;
-      right: 30% !important; */
+      /* visibility: hidden !important; */
+       margin-top:10px !important;
+      /* right: 30% !important; */
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -6876,7 +6877,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     margin-bottom: 23px;
     font-size: 39px;
     line-height: 45px;
-    margin-top: 90px;
+    /* margin-top: 90px; */
     color : black !important;
   }
 

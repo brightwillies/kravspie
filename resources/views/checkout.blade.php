@@ -9,7 +9,8 @@
     <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
 
     <script>
-        const appId = 'sandbox-sq0idb-_jIaAsk0s2luLB6CRVuhQw';
+        // const appId = 'sandbox-sq0idb-_jIaAsk0s2luLB6CRVuhQw';
+        const appId = 'sq0idp-qcUGINR_epBSs95dMWeVbw';
         const locationId = 'L35RCSQ0E5DNT';
 
         async function initializeCard(payments) {
