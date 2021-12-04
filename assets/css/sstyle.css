@@ -6874,9 +6874,9 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
 }
 @media only screen and (max-width: 767px) {
   .hero_content2 h1 {
-    margin-bottom: 23px;
-    font-size: 39px;
-    line-height: 45px;
+    margin-bottom: 0px;
+    font-size: 35px;
+    line-height: 30px;
     /* margin-top: 90px; */
     color : black !important;
   }
