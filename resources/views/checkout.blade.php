@@ -6,7 +6,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Checkout | KravsPie</title>
     @include('includes.head')
-    <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+    <!-- <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script> -->
+    <script type="text/javascript" src="https://web.squarecdn.com/v1/square.js"></script>
 
     <script>
         // const appId = 'sandbox-sq0idb-_jIaAsk0s2luLB6CRVuhQw';

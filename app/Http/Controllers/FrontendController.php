@@ -78,7 +78,7 @@ class FrontendController extends Controller
         // ]);
         $client = new SquareClient([
             'accessToken' => 'EAAAFNoXBzoso8gSvI0LigwNpVF9veOak-n1x4wAUitcMWflkymJCWcLXlveKXao',
-            'environment' => Environment::SANDBOX,
+            'environment' => Environment::PRODUCTION,
         ]);
         $amount_money = new \Square\Models\Money();
         $amount_money->setAmount($amount);
