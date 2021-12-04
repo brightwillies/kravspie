@@ -1911,7 +1911,7 @@ textarea:-ms-input-placeholder {
 }
 .copyright_right p {
   color: white;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 @media only screen and (max-width: 767px) {
   .copyright_right p {
