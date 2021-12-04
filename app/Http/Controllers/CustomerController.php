@@ -124,13 +124,13 @@ class CustomerController extends Controller
         $data = array(
             'name' => $request->first_name . ' ' . $request->last_name,
             'email' => $request->email);
-        // try {
+         try {
 
         $mail = Mail::to($request->email)->send(new RegistrationEmail($data));
 
-        // } catch (\Throwable $th) {
+         } catch (\Throwable $th) {
         //     throw $th;
-        // }
+         }
         session(['loggedin' => $newRecord->mask]);
 
         $customerSessionID = Session::get('loggedin');
