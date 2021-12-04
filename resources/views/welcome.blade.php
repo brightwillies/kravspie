@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Home | KravsPie</title>
     @include('includes.head')
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 <style>
     .backcolor{
@@ -17,10 +17,22 @@
         text-shadow: 0px -2px 0px #ffffff;
     }
 
-.product_thumb img {
-
-  height: 375px !important;
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero_content2 {
+  margin-top: 200px !important;
+  }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hero_content2 {
+  margin-top: 200px !important;
+  }
+}
+
+#movedownmore{
+    margin-top: 40px !important;
+}
+
 </style>
 </head>
 
@@ -48,14 +60,14 @@
     </div>
 
     <!--slide banner section start-->
-    <div class="img-fluid hero_banner_section hero_banner2 d-flex align-items-center mb-60" data-bgimg="assets/img/bg/backgroundd.jpg">
+    <div class="img-fluid hero_banner_section  hero_banner2 align-items-center mb-60" data-bgimg="assets/img/bg/backgroundd.jpg">
         <!-- <div class="img-fluid hero_banner_section hero_banner2 d-flex align-items-center mb-60" data-bgimg="https://kravspie.com/wp-content/uploads/2021/11/Picture-1-scaled.jpg"> -->
         <div class="container">
             <div class="hero_banner_inner">
                 <div class="row align-items-center">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
-                        <div class="hero_content hero_content2">
+                        <div  class="hero_content  hero_content2 newme">
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
                             <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> Not Your Average Pie</h1>
@@ -141,7 +153,8 @@
 
 
     <!-- testimonial section start -->
-    <div class="testimonial_section mb-110 wow fadeInUp" data-bgimg="/assets/img/bg/eatt.jpg" data-wow-delay="0.1s" data-wow-duration="1.1s">
+    <!-- <div class="testimonial_section mb-110 wow fadeInUp" data-bgimg="/assets/img/bg/eat.jpg" data-wow-delay="0.1s" data-wow-duration="1.1s"> -->
+    <div class="testimonial_section mb-110 wow fadeInUp"  data-wow-delay="0.1s" data-wow-duration="1.1s">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">

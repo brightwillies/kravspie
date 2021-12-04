@@ -6,6 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Shop | KravsPie</title>
     @include('includes.head')
+        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"> -->
+
 </head>
 
 <body>
@@ -85,14 +88,14 @@
                                                     <figcaption class="product_content text-center">
                                                         <h4><a href="/products/{{$product->id}}">{{$product->name}}</a></h4>
                                                         <div class="price_box">
-                                                            <span class="current_price">  {{number_format($product->price, 2, '.', '')}}</span>
+                                                            <span class="current_price">  $   {{number_format($product->price, 2, '.', '')}}</span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
                                             </article>
                                         </div>
                                         @endforeach
-                    @endif
+                                        @endif
                                     </div>
                                 </div>
 

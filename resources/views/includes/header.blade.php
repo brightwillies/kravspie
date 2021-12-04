@@ -71,6 +71,7 @@
                             <nav>
                                 <ul class="d-flex">
 
+
                                     <li><a    class="{{ (request()->is('/')) ? 'active' : '' }}"   class="active" href="/">Home</a></li>
                                     <li><a  class="{{ (request()->is('about-us')) ? 'active' : '' }}" href="/about-us">About</a></li>
                                     <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Weekend Pre-Order</a></li>
@@ -84,15 +85,16 @@
                         <!--main menu end-->
                         <div class="header_account">
                             <ul class="d-flex">
+
                                 <!-- <li class="header_search"><a href="javascript:void(0)"><i class="pe-7s-search"></i></a>
                                 </li> -->
 
-                                <li class="shopping_cart"><a href="javascript:void(0)"><i class="pe-7s-cart"></i></a>
-                                    <span id="totalqnt"  class="item_count">{{$cart_total}}</span>
+                                <li id="mright" class="shopping_cart"><a href="#" onclick="return false;"><i class="pe-7s-cart"></i>
+                                    <span id="totalqnt"  class="item_count">{{$cart_total}}</span></a>
                                 </li>
                             </ul>
-                            <div class="canvas_open">
-                                <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                            <div id="mright" class="canvas_open">
+                                <a href="#"  onclick="return false;"><i class="ion-navicon"></i></a>
                             </div>
                         </div>
                     </div>
