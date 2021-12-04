@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="/assets/css/magnific-popup.css">
     <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/sstyle.css">
 
     <!--modernizr min js here-->
     <script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
