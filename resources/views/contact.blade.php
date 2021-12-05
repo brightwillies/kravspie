@@ -35,11 +35,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs_text">
-                        <h1>Contact Us</h1>
-                        <ul>
-                            <li><a href="index.html">Home </a></li>
-                            <li> // Contact Us</li>
-                        </ul>
+                        <h1 style="color:white;">Contact Us</h1>
+                       
                     </div>
                 </div>
             </div>

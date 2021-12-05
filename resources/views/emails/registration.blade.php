@@ -129,7 +129,7 @@
                                                                         <div style="color: rgb(61, 61, 61); font-family: Lato, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; text-align: left;">
 
                                                                             <p> Kind Regards, <br>
-                                                                            KravsPie  <br>
+                                                                            Kravs Pie  <br>
 
 </p>
 

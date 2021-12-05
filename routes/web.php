@@ -17,6 +17,12 @@ Route::get('/email-registeration', function () {
 Route::get('/order-placed',function () {
         return view('thankyou');
     });
+Route::get('/policy',function () {
+        return view('policy');
+    });
+Route::get('/terms',function () {
+        return view('terms');
+    });
 Route::post('/payment', [FrontendController::class, 'createPayment']);
 
 Route::get('/login-register', function () {

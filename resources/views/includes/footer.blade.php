@@ -30,8 +30,17 @@
                                 <img src="/assets/img/others/shipping3.png" alt="">
                             </div> -->
                         <div class="shipping_text">
-                            <h3>Shipping Policy</h3>
-                            <p>Read more</p>
+                            <h3>
+                            <a target="_blank" href="/policy">
+                            Shipping Policy
+                            </a>
+                            </h3>
+                            <h3>
+                            <a target="_blank" href="/terms">
+                            Terms of Service
+                            </a>
+                            </h3>
+
                         </div>
                     </div>
                 </div>
