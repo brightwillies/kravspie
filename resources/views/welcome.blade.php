@@ -73,7 +73,7 @@
                             </h3>
                             <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1>
                             <!-- <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4> -->
-                            <a id="shopbutton" style="margin-top:40px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/shop">Pre-order Now</a>
+                            <a id="shopbutton" style="margin-top:40px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/products/9">Pre-order Now</a>
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
