@@ -61,6 +61,7 @@
 
     <!--slide banner section start-->
     <div class="img-fluid hero_banner_section  hero_banner2 align-items-center mb-60" data-bgimg="assets/img/bg/backgroundd.jpg">
+    <!-- <div class="img-fluid hero_banner_section  hero_banner2 align-items-center mb-60" data-bgimg="assets/img/bg/christmas.jpg"> -->
         <!-- <div class="img-fluid hero_banner_section hero_banner2 d-flex align-items-center mb-60" data-bgimg="https://kravspie.com/wp-content/uploads/2021/11/Picture-1-scaled.jpg"> -->
         <div class="container">
             <div class="hero_banner_inner">
@@ -70,9 +71,9 @@
                         <div  class="hero_content  hero_content2 newme">
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
-                            <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> Not Your Average Pie</h1>
-                            <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4>
-                            <a id="shopbutton" style="margin-top:40px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/shop">Shop Now</a>
+                            <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1>
+                            <!-- <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4> -->
+                            <a id="shopbutton" style="margin-top:40px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/shop">Pre-order Now</a>
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
@@ -186,7 +187,7 @@
         </div>
     </div>
     <!-- testimonial section start -->
-
+<!-- <button type="button" onclick="deviceType()"> Click me</button> -->
     <div class="container">
     <div class="row" style="margin-bottom: 20px;">
     <div class="col-12 text-center">
@@ -248,6 +249,25 @@
 
 
         });
+    </script>
+
+    <script>
+
+// const deviceType = () => {
+//     // const ua = navigator.userAgent;
+//     // if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+//     //     alert("tablet");
+//     // }
+//     // else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+//     //     alert( "mobile");
+//     // }
+//     // alert("desktop");
+
+//     const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+// if (isMobile) {
+//  alert('bright');
+// }
+// };
     </script>
 
 
