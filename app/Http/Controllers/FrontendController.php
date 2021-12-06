@@ -101,9 +101,9 @@ class FrontendController extends Controller
             $newOrder->number_of_items = count($items);
             $newOrder->pickupdate = $pickupdate;
             $newOrder->pickuptime = $pickuptime;
-            $newOrder->amount = $amount;
+            $newOrder->amount = ($amount / 100);
             $newOrder->placed_on = gmdate('Y-m-d H:i:s');
-            $newOrder->mask = generate_mask();
+            $newOrder->mask = generate_random_password();
             if ($newOrder->save()) {
 
                 $emailArray = array();
@@ -133,7 +133,7 @@ class FrontendController extends Controller
                     'items' => $emailArray,
                     'name' => $findCustomer->first_name . ' ' . $findCustomer->last_name,
                     'orderid' => $newItems->mask,
-                    'cost' => $amount,
+                    'cost' => ($amount / 100),
                     'pickupdate' => $pickupdate . ',' . now()->year,
                 );
 
@@ -202,10 +202,10 @@ class FrontendController extends Controller
 
         $getDates = Customdate::all();
 
-        if($getDates->isNotEmpty()){
+        if ($getDates->isNotEmpty()) {
             foreach ($getDates as $key => $singDate) {
 
-            $days[] =  $singDate->month. " ". $singDate->number;
+                $days[] = $singDate->month . " " . $singDate->number;
 
             }
         }
