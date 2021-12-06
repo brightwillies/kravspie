@@ -79,7 +79,7 @@
 
                                     <li><a    class="{{ (request()->is('/')) ? 'active' : '' }}"   class="active" href="/">Home</a></li>
                                     <li><a  class="{{ (request()->is('about-us')) ? 'active' : '' }}" href="/about-us">About</a></li>
-                                    <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Weekend Pre-Order</a></li>
+                                    <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Pre-Order</a></li>
                                     <li><a class="{{ (request()->is('contact-us')) ? 'active' : '' }}"  href="/contact-us">Contact</a></li>
 
                                     <li><a  target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0">NationWide Delivery</a></li>
@@ -128,9 +128,7 @@
                     <a href="/products/{{$cProduct->slug}}">{{$cProduct->name}}</a>
                     <p>{{$cProduct->quantity}} x <span> $  {{number_format($cProduct->price, 2, '.', '')}}</span></p>
                 </div>
-                <div class="cart_remove">
-                    <a href="#"><i class="ion-android-close"></i></a>
-                </div>
+               
             </div>
             @endforeach
             @endif

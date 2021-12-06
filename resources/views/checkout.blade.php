@@ -24,7 +24,8 @@
         async function createPayment(token) {
 
             const _token = this['token'].value;
-            const famount = this['amountt'].value;
+            const ffamount = this['amountt'].value;
+            const famount = (ffamount * 100);
             const dayy = this['pickupdate'].value;
             const pickuptime = this['pickuptime'].value;
             const items = this['items'].value;
@@ -219,7 +220,8 @@
                                         <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 <p class="mb-3">
-                                                    Place the order Only If You Can Pickup Locally From the <a target="_blank" href="https://g.page/DFMDallasFarmersMarket_?share"><b>Dallas Farmers Market, on Saturdays 10am - 3:30pm. </b> </a>
+                                                    Place the order Only If You Can Pickup Locally From <a target="_blank" href="https://www.google.com/maps/dir//jelly+queens/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x8644d18e8ad497f5:0xc45322eb4ec2b458?sa=X&ved=2ahUKEwjBhd71j9D0AhXGyTgGHYmpBO8Q9Rd6BAhKEAU
+"><b>The Jelly Queens, McKinney,TX  on December 23 & 24 </b> </a>
                                                 </p>
                                             </div>
                                         </div>

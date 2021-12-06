@@ -33,6 +33,7 @@ var cart = {
 
                 // addProductNotice(' Product added ,' + '<img src=' + image + ' alt="">', '<h3> <a href="product.html">' + name + '</a>' + ' ' + message + ' ' + '<a href="cart.html"> shopping cart</a>!</h3>', 'success');
                 addProductNotice(message);
+
                 document.getElementById("totalqnt").innerHTML = total;
                 //	document.getElementById("totalout").innerHTML = total;
             }
@@ -127,4 +128,5 @@ function addProductNotice(
     };
     toastr.success(message);
 
+    // location.reload();
 }
