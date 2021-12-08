@@ -210,13 +210,13 @@ class FrontendController extends Controller
             }
         }
 
-        $startdate = strtotime("Saturday");
-        $enddate = strtotime("+6 weeks", $startdate);
-        while ($startdate < $enddate) {
-            $days[] = date("M d", $startdate);
-            $startdate = strtotime("+1 week", $startdate);
+        // $startdate = strtotime("Saturday");
+        // $enddate = strtotime("+6 weeks", $startdate);
+        // while ($startdate < $enddate) {
+        //     $days[] = date("M d", $startdate);
+        //     $startdate = strtotime("+1 week", $startdate);
 
-        }
+        // }
 
         $getTemporalCartProducts = Cart::Where('customer_id', $userdata)->get();
 
@@ -236,5 +236,5 @@ class FrontendController extends Controller
 
     }
 
-   
+
 }
