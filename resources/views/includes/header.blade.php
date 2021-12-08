@@ -118,6 +118,7 @@
                     <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
                 </div>
             </div>
+            <div id="cartNew">
             @if($cartProducts)
             @foreach ($cartProducts as $key => $cProduct)
             <div class="cart_item">
@@ -132,6 +133,7 @@
             </div>
             @endforeach
             @endif
+            </div>
 
         </div>
         <div class="mini_cart_table">

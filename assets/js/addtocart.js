@@ -35,6 +35,7 @@ var cart = {
                 addProductNotice(message);
 
                 document.getElementById("totalqnt").innerHTML = total;
+                updateCartTable();
                 //	document.getElementById("totalout").innerHTML = total;
             }
         });
@@ -65,6 +66,7 @@ var cart = {
                 // var name = data.pro_name;
                 var message = data.message;
                 addProductNotice(message);
+                updateCartTable();
                 location.reload();
                 // addProductNotice(
                 //     ' Item removed',
@@ -101,6 +103,7 @@ var cart = {
                 var message = data.message;
                 addProductNotice(message);
                 location.reload();
+                updateCartTable();
                 // addProductNotice(
                 //     ' Item removed',
                 //     '<img src=' + image + ' alt="">',
@@ -133,7 +136,7 @@ function updateCartTable() {
 
     $.ajax({
         type: 'GET',
-        url: '/cart/get-table',
+        url: '/cart/get-cart-table',
         data: {},
         success: function(data) {
 
