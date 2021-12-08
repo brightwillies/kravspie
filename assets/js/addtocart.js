@@ -138,11 +138,14 @@ function updateCartTable() {
         type: 'GET',
         url: '/cart/get-cart-table',
         data: {},
-        success: function(data) {
+        success: function (data) {
 
             var table = data.table;
+            var cartSum = data.sum;
+
 
             document.getElementById("cartNew").innerHTML = table;
+            document.getElementById("summm").innerHTML = cartSum;
         }
     });
 }

@@ -22,9 +22,12 @@ class CartController extends Controller
         $getTemporalCartProducts = collect();
            $getTemporalCartProducts = Cart::where('customer_id', $temporalShoppingID)->orWhere('customer_id', $customerSessionID)->get();
 
+           $cartSum =0;
         if ($getTemporalCartProducts->isNotEmpty()) {
             $productsTotal = $getTemporalCartProducts->count();
             foreach ($getTemporalCartProducts as $key => $singTempCartItem) {
+
+                $cartSum = $cartSum + $singTempCartItem->subprice;
 
                 $findProduct = Product::find($singTempCartItem->product_id);
                 if ($findProduct) {
@@ -55,12 +58,13 @@ class CartController extends Controller
                 }
             }
         }
-        return response()->json(['table' => $cartProducts, 'status' => 200]);
+        $cartSum  ='$ ' . number_format($cartSum, 2, '.', '');
+        return response()->json(['table' => $cartProducts, 'sum'=>$cartSum,  'status' => 200]);
 
         return $cartProducts;
     }
 
-    
+
 
     public function Store(Request $request, Factory $cookie)
     {
@@ -134,8 +138,12 @@ class CartController extends Controller
             $message = $findProduct->name . ' has been added to the cart';
         }
 
+        $total  = 0;
         $totalcartitems = Cart::where('customer_id', $userdata)->orwhere('customer_id', $tempid)->get();
-        $total = Count($totalcartitems);
+       foreach ($totalcartitems as $key => $value) {
+        $total = $total + $value->quantity;
+       }
+
 
         $pro_image = $findProduct->image;
 

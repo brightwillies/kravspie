@@ -141,7 +141,7 @@
 
                 <div class="cart_total mt-10">
                     <span>total:</span>
-                    <span class="price">$ {{number_format($cartSum, 2, '.', '')}}</span>
+                    <span id="summm" class="price">$ {{number_format($cartSum, 2, '.', '')}}</span>
                 </div>
             </div>
         </div>

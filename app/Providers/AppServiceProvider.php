@@ -34,12 +34,14 @@ class AppServiceProvider extends ServiceProvider
             $getTemporalCartProducts = Cart::where('customer_id', $tempID)->orWhere('customer_id', $customerSessionID)->get();
 
             $cartSum = 0;
+            $productsTotal = 0;
             if ($getTemporalCartProducts->isNotEmpty()) {
                 foreach ($getTemporalCartProducts as $key => $sCartItem) {
                     $cartSum = $cartSum + $sCartItem->subprice;
+                    $productsTotal =  $productsTotal + $sCartItem->quantity;
                 }
             }
-            $productsTotal = count($getTemporalCartProducts);
+
             $view->with('cartSum', $cartSum);
             $view->with('cart_total', $productsTotal);
             $view->with('cartProducts', $getTemporalCartProducts);
