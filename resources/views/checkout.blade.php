@@ -287,7 +287,7 @@
                 </div>
 
                 <div class="col-lg-6 col-12">
-             <img src="/assets/img/bg/bgg.jpg" alt="">
+             <img src="/assets/img/bg/bbgg.jpg" alt="">
                 </div>
             </div>
         </div>
