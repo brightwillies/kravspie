@@ -13,8 +13,12 @@
     height: 250px !important;
 }
 
-.product_details_desc ul,ol{
+modifyhere ul{
 
+    list-style: square !important;
+}
+
+#modifyhere ul{
     list-style: square !important;
 }
     </style>
@@ -91,8 +95,9 @@
                         </div>
 
                         <p class="product_details_desc">
-
+<div id="modifyhere">
                         {!!$product->description!!}
+                        </div>
                         </p>
                         <div class="product_pro_button quantity d-flex align-items-center">
                             <!-- <div class="pro-qty border">
