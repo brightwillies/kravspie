@@ -6,34 +6,36 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Home | KravsPie</title>
     @include('includes.head')
-     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+    <!-- <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"> -->
+    <style>
+        .backcolor {
+            /* background: beige; */
+            /* font-family: Quando"; */
+            font-weight: 800;
+            font-family: "Quando";
+            text-shadow: 0px -2px 0px #ffffff;
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            .hero_content2 {
+                margin-top: 200px !important;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .hero_content2 {
+                margin-top: 200px !important;
+            }
+        }
+
+        #movedownmore {
+            margin-top: 40px !important;
+        }
+    </style>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
-<style>
-    .backcolor{
-        /* background: beige; */
-        /* font-family: Quando"; */
-        font-weight: 800;
-        font-family: "Quando";
-        text-shadow: 0px -2px 0px #ffffff;
-    }
-
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .hero_content2 {
-  margin-top: 200px !important;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .hero_content2 {
-  margin-top: 200px !important;
-  }
-}
-
-#movedownmore{
-    margin-top: 40px !important;
-}
-
-</style>
 </head>
 
 <body>
@@ -61,14 +63,14 @@
 
     <!--slide banner section start-->
     <div class="img-fluid hero_banner_section  hero_banner2 align-items-center mb-60" data-bgimg="assets/img/bg/backgroundd.jpg">
-    <!-- <div class="img-fluid hero_banner_section  hero_banner2 align-items-center mb-60" data-bgimg="assets/img/bg/christmas.jpg"> -->
+        <!-- <div class="img-fluid hero_banner_section  hero_banner2 align-items-center mb-60" data-bgimg="assets/img/bg/christmas.jpg"> -->
         <!-- <div class="img-fluid hero_banner_section hero_banner2 d-flex align-items-center mb-60" data-bgimg="https://kravspie.com/wp-content/uploads/2021/11/Picture-1-scaled.jpg"> -->
         <div class="container">
             <div class="hero_banner_inner">
                 <div class="row align-items-center">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
-                        <div  class="hero_content  hero_content2 newme">
+                        <div class="hero_content  hero_content2 newme">
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
                             <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1>
@@ -155,7 +157,7 @@
 
     <!-- testimonial section start -->
     <!-- <div class="testimonial_section mb-110 wow fadeInUp" data-bgimg="/assets/img/bg/eat.jpg" data-wow-delay="0.1s" data-wow-duration="1.1s"> -->
-    <div class="testimonial_section mb-110 wow fadeInUp"  data-wow-delay="0.1s" data-wow-duration="1.1s">
+    <div class="testimonial_section mb-110 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -163,55 +165,56 @@
                 </div>
 
                 <div class="col-lg-12">
-                    <div class="latest-news">
+
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                            <div class="swiper-slide text-center">
-                            <i style="padding-left: 20px; font-size:25px;">The Almond pie is sooo good  </i>
-                             <h5>Kray W.</h5>
-                            </div>
-                            <div class="swiper-slide text-center">
-                            <i style="padding-left: 20px; font-size:25px;">  Thank you for the delicious pie </i>
-                            <h5>Priscilla Shirer</h5>
-                        </div>
+                                <div class="swiper-slide text-center">
 
+                                    <i style="padding-left: 20px; font-size:25px;">The Almond pie is sooo good </i>
+                                    <h5>Kray W.</h5>
+                                </div>
+                                <div class="swiper-slide text-center">
+
+                                    <i style="padding-left: 20px; font-size:25px;"> Thank you for the delicious pie </i>
+                                    <h5>Priscilla Shirer</h5>
+                                </div>
                             </div>
 
                             <!-- If we need navigation buttons -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
-                    </div>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- testimonial section start -->
-<!-- <button type="button" onclick="deviceType()"> Click me</button> -->
+    <!-- <button type="button" onclick="deviceType()"> Click me</button> -->
     <div class="container">
-    <div class="row" style="margin-bottom: 20px;">
-    <div class="col-12 text-center">
-                    <h1>In The News</h1>
-                </div>
-        <div class="col-lg-4 col-sm-12">
-            <a href="https://www.dallasnews.com/food/restaurant-news/2021/07/12/dallas-based-ghanaian-bakers-pie-shop-tells-a-story-of-west-africa/">
-            <img src="/assets/img/bg/news1.png" alt="">
-            </a>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-        <a href="https://vegoutmag.com/food-and-drink/10-vegan-desserts-you-need-to-try-on-goldbelly">
-            <img src="/assets/img/bg/news2.png" alt="">
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-12 text-center">
+                <h1>In The News</h1>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <a href="https://www.dallasnews.com/food/restaurant-news/2021/07/12/dallas-based-ghanaian-bakers-pie-shop-tells-a-story-of-west-africa/">
+                    <img src="/assets/img/bg/news1.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <a href="https://vegoutmag.com/food-and-drink/10-vegan-desserts-you-need-to-try-on-goldbelly">
+                    <img src="/assets/img/bg/news2.png" alt="">
 
-        </a>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-        <a href="http://voyagedallas.com/interview/check-joseline-ballards-story/">
-            <img src="/assets/img/bg/news3.png" alt="">
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <a href="http://voyagedallas.com/interview/check-joseline-ballards-story/">
+                    <img src="/assets/img/bg/news3.png" alt="">
 
-        </a>
-        </div>
+                </a>
+            </div>
 
-    </div>
+        </div>
     </div>
     <!-- testimonial section end -->
 
@@ -219,7 +222,13 @@
     <!--footer area start-->
     @include('includes.footer')
     <!--footer area end-->
+
     @include('includes.foot')
+
+
+
+
+
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -250,27 +259,6 @@
 
         });
     </script>
-
-    <script>
-
-// const deviceType = () => {
-//     // const ua = navigator.userAgent;
-//     // if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-//     //     alert("tablet");
-//     // }
-//     // else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
-//     //     alert( "mobile");
-//     // }
-//     // alert("desktop");
-
-//     const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-// if (isMobile) {
-//  alert('bright');
-// }
-// };
-    </script>
-
-
 
 
 
