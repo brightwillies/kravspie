@@ -42,14 +42,6 @@
     <!--modernizr min js here-->
     <script src="/assets/js/vendor/modernizr-3.11.2.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
-    <!-- Structured Data  -->
-    <!-- <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Replace_with_your_site_title",
-        "url": "Replace_with_your_site_URL"
-        }
-    </script>
+ 
