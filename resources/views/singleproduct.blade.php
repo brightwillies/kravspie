@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Bucker – Single Product </title>
+    <title>Kravs Pie </title>
     @include('includes.head')
 
     <style>
