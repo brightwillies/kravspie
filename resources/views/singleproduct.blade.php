@@ -12,6 +12,11 @@
     width: 100%;
     height: 250px !important;
 }
+
+.product_details_desc ul,ol{
+
+    list-style: square !important;
+}
     </style>
 </head>
 
