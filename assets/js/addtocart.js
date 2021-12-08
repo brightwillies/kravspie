@@ -116,6 +116,33 @@ var cart = {
 
 
 
+function updateCartTable() {
+
+    $.ajaxSetup({
+
+        headers: {
+
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+
+    });
+
+
+    // alert(product_id);
+    // alert(product_size);
+
+    $.ajax({
+        type: 'GET',
+        url: '/cart/get-table',
+        data: {},
+        success: function(data) {
+
+            var table = data.table;
+
+            document.getElementById("cartNew").innerHTML = table;
+        }
+    });
+}
 
 
 function addProductNotice(

@@ -14,7 +14,7 @@
 
                                 <li><a class="active" href="/">Home</a></li>
                                 <li><a href="/about-us">About Us</a></li>
-                                <li><a href="/shop">Weekends Pre-Order</a></li>
+                                <li><a href="/shop">Pre-Order</a></li>
 
                                 <li class="menu-item-has-children"><a href="/contact-us">Contact Us</a></li>
                             </ul>

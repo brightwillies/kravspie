@@ -10,22 +10,57 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function getCartTable()
     {
-        //
+        // $customerSessionID = \Session::get('loggedin');
+        $productsTotal = 0;
+        $productsTotalSum = 0;
+        $cartProducts = array();
+        $temporalShoppingID = Cookie::get('cus-shopping-id');
+        $customerSessionID = \Session::get('loggedin');
+        $getTemporalCartProducts = collect();
+           $getTemporalCartProducts = Cart::where('customer_id', $temporalShoppingID)->orWhere('customer_id', $customerSessionID)->get();
+
+        if ($getTemporalCartProducts->isNotEmpty()) {
+            $productsTotal = $getTemporalCartProducts->count();
+            foreach ($getTemporalCartProducts as $key => $singTempCartItem) {
+
+                $findProduct = Product::find($singTempCartItem->product_id);
+                if ($findProduct) {
+                    $firstProductImage = $findProduct->image;
+                    $singTempCartItem->name = $findProduct->name;
+                    $singTempCartItem->price = $findProduct->price;
+                    $singTempCartItem->image = $firstProductImage;
+                    $subTotal = $singTempCartItem->subprice;
+                    $subTotal = number_format($subTotal, 2, '.', '');
+                    $productsTotalSum = $productsTotalSum + $subTotal;
+
+                    $productsTotalSum = number_format($productsTotalSum, 2, '.', '');
+
+                    $singTempCartItem->price = number_format($singTempCartItem->price, 2, '.', '');
+                    $cartProducts[] =
+
+                        "<div class='cart_item'>
+                    <div class='cart_img'>
+                        <a href='/products/$singTempCartItem->slug'><img width='88px' height='100px' src='$singTempCartItem->image' alt=''></a>
+                    </div>
+                    <div class='cart_info'>
+                        <a href='/products/$singTempCartItem->slug'>$singTempCartItem->name</a>
+                        <p>$singTempCartItem->quantity x <span> $ $singTempCartItem->price</span></p>
+                    </div>
+
+                </div>";
+
+                }
+            }
+        }
+        return response()->json(['table' => $cartProducts, 'status' => 200]);
+
+        return $cartProducts;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
 
     public function Store(Request $request, Factory $cookie)
     {

@@ -38,9 +38,12 @@ Route::group(['prefix' => 'cart'], function () {
     Route::post('/', [CartController::class, 'store']);
     Route::post('/reduce', [CartController::class, 'reduce']);
     Route::post('/increase', [CartController::class, 'increase']);
+    Route::get('/get-cart-table', [CartController::class, 'getCartTable'])->name('getTable');
+
 });
 
 Route::get('/fogot-password', [CustomerController::class, 'forgetpass']);
+
 
 Route::group(['prefix' => 'customer'], function () {
     Route::post('/register', [CustomerController::class, 'register']);
