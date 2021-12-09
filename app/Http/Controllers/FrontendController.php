@@ -171,11 +171,11 @@ class FrontendController extends Controller
 
                 try {
 
-               //     $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
+                  $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
                 } catch (\Throwable $th) {
                     throw $th;
                 }
-                // $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
+                 $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
             }
 
             return $result = $api_response->getResult();
