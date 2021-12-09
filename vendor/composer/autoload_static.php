@@ -520,6 +520,7 @@ class ComposerStaticInitaf56081924a3b6a61b5d19fcc07d13ea
         'App\\Customdate' => __DIR__ . '/../..' . '/app/Customdate.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Api\\Admin\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/AuthController.php',
+        'App\\Http\\Controllers\\Api\\Admin\\CDateController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/CDateController.php',
         'App\\Http\\Controllers\\Api\\Admin\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/CategoryController.php',
         'App\\Http\\Controllers\\Api\\Admin\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/GalleryController.php',
         'App\\Http\\Controllers\\Api\\Admin\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/Admin/OrderController.php',

@@ -11,6 +11,7 @@ return array(
     'App\\Customdate' => $baseDir . '/app/Customdate.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Api\\Admin\\AuthController' => $baseDir . '/app/Http/Controllers/Api/Admin/AuthController.php',
+    'App\\Http\\Controllers\\Api\\Admin\\CDateController' => $baseDir . '/app/Http/Controllers/Api/Admin/CDateController.php',
     'App\\Http\\Controllers\\Api\\Admin\\CategoryController' => $baseDir . '/app/Http/Controllers/Api/Admin/CategoryController.php',
     'App\\Http\\Controllers\\Api\\Admin\\GalleryController' => $baseDir . '/app/Http/Controllers/Api/Admin/GalleryController.php',
     'App\\Http\\Controllers\\Api\\Admin\\OrderController' => $baseDir . '/app/Http/Controllers/Api/Admin/OrderController.php',
