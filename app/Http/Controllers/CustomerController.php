@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Mail\PasswordReset;
-use App\Mail\RegistrationEmail;
 use App\Models\Cart;
 use App\Models\Customer;
 use Illuminate\Http\Request;
@@ -111,6 +110,11 @@ class CustomerController extends Controller
 
             return Redirect::back()->withErrors(['message' => 'Passwords are not the same']);
         }
+        $findCustomer = Customer::where('email', $request->email)->where('type', 'customer')->first();
+        if ($findCustomer) {
+
+            return Redirect::back()->withErrors(['message' => 'A record exist with the email, choose another email']);
+        }
         $newRecord = new Customer();
         $newRecord->first_name = $request->first_name;
         $newRecord->last_name = $request->last_name;
@@ -124,20 +128,23 @@ class CustomerController extends Controller
         $data = array(
             'name' => $request->first_name . ' ' . $request->last_name,
             'email' => $request->email);
-         try {
+        try {
 
-        $mail = Mail::to($request->email)->send(new RegistrationEmail($data));
+            // $mail = Mail::to($request->email)->send(new RegistrationEmail($data));
 
-         } catch (\Throwable $th) {
-        //     throw $th;
-         }
+        } catch (\Throwable $th) {
+            //     throw $th;
+        }
         session(['loggedin' => $newRecord->mask]);
 
         $customerSessionID = Session::get('loggedin');
+        $tempid = Cookie::get('cus-shopping-id');
 
         if (!empty($customerSessionID)) {
 
-            $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->get();
+            // $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->get();
+
+            $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->orWhere('customer_id', $tempid)->get();
 
             if ($getTemporalCartProducts->isNotEmpty()) {
                 foreach ($getTemporalCartProducts as $key => $sValue) {

@@ -52,9 +52,8 @@
                                     <li class="account_link"> <i class="icofont-user-alt-7"></i><a href="#">Account</a>
                                         <ul class="dropdown_account_link">
                                             <!-- <li><a href="/my-account">My Account</a></li> -->
-                                            <li><a href="/login-register">Login</a></li>
-                                            <li><a href="/logout">Logout</a></li>
-
+                                          
+                                            {!!$check_aut!!}
                                         </ul>
                                     </li>
                                 </ul>

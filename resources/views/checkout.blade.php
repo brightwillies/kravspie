@@ -11,7 +11,7 @@
 
     <script>
         // const appId = 'sandbox-sq0idb-_jIaAsk0s2luLB6CRVuhQw';
-        const appId = 'sq0idp-qcUGINR_epBSs95dMWeVbw';
+   const appId = 'sq0idp-qcUGINR_epBSs95dMWeVbw';
         const locationId = 'L35RCSQ0E5DNT';
 
         async function initializeCard(payments) {
@@ -30,30 +30,91 @@
             const pickuptime = this['pickuptime'].value;
             const items = this['items'].value;
 
-            const body = JSON.stringify({
-                locationId,
-                sourceId: token,
-                amount: famount,
-                pickupdate : dayy,
-                pickuptime : pickuptime,
-                items : items,
-                _token : _token
-            });
+            const typpe = this['typpe'].value;
 
-            const paymentResponse = await fetch('/payment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body,
-            });
 
-            if (paymentResponse.ok) {
-                return paymentResponse.json();
+            if (typpe === "guest") {
+                console.log('guest');
+                // if there is ty
+                const first_name = this['first_name'].value;
+                const last_name = this['last_name'].value;
+                const email = this['email'].value;
+                const telephone_number = this['telephone_number'].value;
+
+
+                if (first_name == "" || last_name == "" || email == "" || telephone_number == "") {
+
+                    alert('Please fill all the fields');
+                    // return false;
+                    const errorBody = await paymentResponse.text();
+                    throw new Error(errorBody);
+                } else {
+                    const body = JSON.stringify({
+                        locationId,
+                        sourceId: token,
+                        amount: famount,
+                        pickupdate: dayy,
+                        pickuptime: pickuptime,
+                        items: items,
+                        _token: _token,
+                        first_name: first_name,
+                        last_name: last_name,
+                        email: email,
+                        telephone_number: telephone_number,
+                        type: typpe,
+                    });
+
+                    const paymentResponse = await fetch('/payment', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body,
+                    });
+
+                    if (paymentResponse.ok) {
+                        return paymentResponse.json();
+                    }
+
+                    const errorBody = await paymentResponse.text();
+                    throw new Error(errorBody);
+                }
             }
 
-            const errorBody = await paymentResponse.text();
-            throw new Error(errorBody);
+
+            if (typpe === "customer") {
+
+                const body = JSON.stringify({
+                    locationId,
+                    sourceId: token,
+                    amount: famount,
+                    pickupdate: dayy,
+                    pickuptime: pickuptime,
+                    items: items,
+                    _token: _token,
+                    type: typpe,
+                });
+
+
+                const paymentResponse = await fetch('/payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body,
+                });
+
+                if (paymentResponse.ok) {
+                    return paymentResponse.json();
+                }
+
+                const errorBody = await paymentResponse.text();
+                throw new Error(errorBody);
+
+            } //ending here
+
+
+
         }
 
         async function tokenize(paymentMethod) {
@@ -221,11 +282,50 @@
                                             <div class="card-body">
                                                 <p class="mb-3">
                                                     Place the order Only If You Can Pickup Locally From <a target="_blank" href="https://www.google.com/maps/dir//jelly+queens/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x8644d18e8ad497f5:0xc45322eb4ec2b458?sa=X&ved=2ahUKEwjBhd71j9D0AhXGyTgGHYmpBO8Q9Rd6BAhKEAU
-"><b>The Jelly Queens, McKinney,TX  on December 23 & 24 </b> </a>
+                                                 "><b>The Jelly Queens, McKinney,TX on December 23 & 24 </b> </a>
                                                 </p>
                                             </div>
                                         </div>
+                                        @if($type == 'guest')
+                                        <button class="btn btn-primary" style="width: 100%;">Login as Returning / New Customer</button>
+                                        <div class="text-center">
+                                            <h5>OR</h5>
+                                        </div>
+                                        <div class="text-center">
+                                            <h5>Checkout as a guest</h5>
+                                        </div>
+                                        @endif
+                                        @if($type == 'guest')
 
+                                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                            <div class="card-body">
+
+                                                <div class="login-form row">
+
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label>First Name</label>
+                                                            <input type="text" id="first_name" name="first_name" placeholder="First Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label>Last Name</label>
+                                                        <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label>Email Address*</label>
+                                                        <input id="email" name="email" type="email" placeholder="Email Address">
+
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label>Phone Number *</label>
+                                                        <input type="text" id="telephone_number" name="telephone_number" placeholder="Telephone Number">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endif
                                         <form id="payment-form">
                                             <div class="row">
                                                 <div class="form-group">
@@ -253,14 +353,22 @@
                                                         <option style="width: 100%;" value="13:30-14:00">13:30-14:00</option>
                                                         <option style="width: 100%;" value="14:00-14:30">14:00-14:30</option>
                                                         <option style="width: 100%;" value="14:30-15:00">14:30-15:00</option> -->
-                                                        <option style="width: 100%;" value="15:00-15:30">15:00-15:30</option>
-                                                        <option style="width: 100%;" value="15:30-16:00">15:30-16:00</option>
-                                                        <option style="width: 100%;" value="16:00-16:30">16:00-16:30</option>
-                                                        <option style="width: 100%;" value="16:30-17:00">16:30-17:00</option>
-                                                        <option style="width: 100%;" value="17:00-17:30">17:00-17:30</option>
-                                                        <option style="width: 100%;" value="17:30-18:00">17:30-18:00</option>
-                                                        <option style="width: 100%;" value="18:00-18:30">18:00-18:30</option>
-                                                        <option style="width: 100%;" value="18:30-19:00">18:30-19:00</option>
+                                                        <option style="width: 100%;" value="15:00-15:30">15:00-15:30
+                                                        </option>
+                                                        <option style="width: 100%;" value="15:30-16:00">15:30-16:00
+                                                        </option>
+                                                        <option style="width: 100%;" value="16:00-16:30">16:00-16:30
+                                                        </option>
+                                                        <option style="width: 100%;" value="16:30-17:00">16:30-17:00
+                                                        </option>
+                                                        <option style="width: 100%;" value="17:00-17:30">17:00-17:30
+                                                        </option>
+                                                        <option style="width: 100%;" value="17:30-18:00">17:30-18:00
+                                                        </option>
+                                                        <option style="width: 100%;" value="18:00-18:30">18:00-18:30
+                                                        </option>
+                                                        <option style="width: 100%;" value="18:30-19:00">18:30-19:00
+                                                        </option>
                                                     </select>
                                                 </div>
                                             </div><br>
@@ -271,6 +379,7 @@
                                             <input type="hidden" name="token" id="token" value="{{ csrf_token() }}" />
                                             <input type="hidden" id="amountt" name="amountt" value="{{$cartSum}}">
                                             <input type="hidden" id="items" name="items" value="{{$idvaleues}}">
+                                            <input type="hidden" id="typpe" name="typpe" value="{{$type}}">
                                         </form>
                                         <div id="payment-status-container">
 
@@ -289,7 +398,7 @@
                 </div>
 
                 <div class="col-lg-6 col-12">
-             <img src="/assets/img/bg/bbgg.jpg" alt="">
+                    <img src="/assets/img/bg/bbgg.jpg" alt="">
                 </div>
             </div>
         </div>

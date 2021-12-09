@@ -42,6 +42,7 @@ class AppServiceProvider extends ServiceProvider
                 }
             }
 
+            $view->with('check_aut', isset($customerSessionID) ?  " <li><a href='/logout'>Logout</a></li>" :"<li><a href='/login-register'>Login</a></li>" );
             $view->with('cartSum', $cartSum);
             $view->with('cart_total', $productsTotal);
             $view->with('cartProducts', $getTemporalCartProducts);

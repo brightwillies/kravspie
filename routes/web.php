@@ -14,15 +14,15 @@ Route::get('/email-registeration', function () {
 
     return view('emails.order')->with('data', $data);
 });
-Route::get('/order-placed',function () {
-        return view('thankyou');
-    });
-Route::get('/policy',function () {
-        return view('policy');
-    });
-Route::get('/terms',function () {
-        return view('terms');
-    });
+Route::get('/order-placed', function () {
+    return view('thankyou');
+});
+Route::get('/policy', function () {
+    return view('policy');
+});
+Route::get('/terms', function () {
+    return view('terms');
+});
 Route::post('/payment', [FrontendController::class, 'createPayment']);
 
 Route::get('/login-register', function () {
@@ -44,7 +44,6 @@ Route::group(['prefix' => 'cart'], function () {
 
 Route::get('/fogot-password', [CustomerController::class, 'forgetpass']);
 
-
 Route::group(['prefix' => 'customer'], function () {
     Route::post('/register', [CustomerController::class, 'register']);
     Route::post('/login', [CustomerController::class, 'login']);
@@ -52,7 +51,7 @@ Route::group(['prefix' => 'customer'], function () {
     Route::post('/forgot-password', [CustomerController::class, 'forgotPassword']);
 });
 
-Route::get('/', [FrontendController::class, 'index']);
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/products/{id}', [FrontendController::class, 'singleproduct']);
 Route::get('/categories/{id}', [FrontendController::class, 'categoryproducts']);
 Route::get('/about-us', [FrontendController::class, 'about']);
