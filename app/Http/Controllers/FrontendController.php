@@ -31,6 +31,8 @@ class FrontendController extends Controller
     //
     public function logout()
     {
+
+
         Session::flush();
 
         $redirect = '/';
@@ -61,12 +63,42 @@ class FrontendController extends Controller
         //   $today = strtotime('today');
         // return date("M d", $today);
 
+        $type = $request->type;
+
+        if ($type == 'guest') {
+
+            $findCustomer = new Customer();
+            $findCustomer->first_name = $request->first_name;
+            $findCustomer->last_name = $request->last_name;
+            $findCustomer->telephone_number = $request->telephone_number;
+            $findCustomer->email = $request->email;
+            $findCustomer->mask = generate_mask();
+            $findCustomer->registered_on = gmdate('Y-m-d');
+            $findCustomer->type = 'guest';
+            $findCustomer->save();
+
+            $tempid = Cookie::get('cus-shopping-id');
+
+            $getTemporalCartProducts = Cart::Where('customer_id', $tempid)->get();
+
+            if ($getTemporalCartProducts->isNotEmpty()) {
+                foreach ($getTemporalCartProducts as $key => $sValue) {
+                    $sValue->customer_id = $findCustomer->mask;
+                    $sValue->save();
+                }
+            }
+            $customerSessionID = $findCustomer->mask;
+
+        } else {
+
+            $customerSessionID = Session::get('loggedin');
+
+            $findCustomer = Customer::where('mask', $customerSessionID)->first();
+
+        }
+
         $itemsreceived = $request->items;
         $items = explode(',', $itemsreceived);
-
-        $customerSessionID = Session::get('loggedin');
-
-        $findCustomer = Customer::where('mask', $customerSessionID)->first();
 
         $pickupdate = $request->pickupdate;
         $pickuptime = $request->pickuptime;
@@ -139,23 +171,22 @@ class FrontendController extends Controller
 
                 try {
 
-                    $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
-
+                  $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
                 } catch (\Throwable $th) {
                     throw $th;
                 }
-                $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
+                 $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
             }
 
             return $result = $api_response->getResult();
         } else {
             return $errors = $api_response->getErrors();
         }
-
     }
 
     public function index()
     {
+
         $products = Product::where('featured', 1)->get()->take(3);
         return view('welcome', compact('products'));
     }
@@ -176,27 +207,28 @@ class FrontendController extends Controller
             }
         }
         return redirect('/');
-
     }
     public function checkout()
     {
 
+        $type = "guest";
+
         $userdata = session('loggedin');
+        $tempid = "";
         if (!$userdata) {
-            //$backurl = url()->previous();
 
-            $backurl = url()->previous();
-            session(['backurl' => $backurl]);
+            // $backurl = url()->previous();
+            // session(['backurl' => $backurl]);
+            // return redirect()->route('authentication')->with('message', 'Authenticate first to checkout');
 
-            return redirect()->route('authentication')->with('message', 'Authenticate first to checkout');
+            $tempid = Cookie::get('cus-shopping-id');
+            if (!$tempid) {
+                return redirect()->route('home');
+            }
 
-            // return    redirect(url('authentication'));
-
+        } else {
+            $type = "customer";
         }
-
-        //     $customerSessionID = \Session::get('loggedin');
-        //     $temporalShoppingID = Cookie::get('cus-shopping-id');
-        //  return   Cart::where('customer_id', $temporalShoppingID)->orWhere('customer_id', $customerSessionID)->get();
 
         $days = array();
 
@@ -206,19 +238,10 @@ class FrontendController extends Controller
             foreach ($getDates as $key => $singDate) {
 
                 $days[] = $singDate->month . " " . $singDate->number;
-
             }
         }
 
-        // $startdate = strtotime("Saturday");
-        // $enddate = strtotime("+6 weeks", $startdate);
-        // while ($startdate < $enddate) {
-        //     $days[] = date("M d", $startdate);
-        //     $startdate = strtotime("+1 week", $startdate);
-
-        // }
-
-        $getTemporalCartProducts = Cart::Where('customer_id', $userdata)->get();
+        $getTemporalCartProducts = Cart::Where('customer_id', $userdata)->orWhere('customer_id', $tempid)->get();
 
         $idvaleues = '';
 
@@ -230,11 +253,11 @@ class FrontendController extends Controller
                     $idvaleues = $idvaleues . ',' . $sItem->product_id . '-' . $sItem->quantity;
                 }
             }
-            return view('checkout', compact('days', 'idvaleues'));
+
+            // return $type;
+
+            return view('checkout', compact('days', 'idvaleues', 'type'));
         }
         return redirect('/');
-
     }
-
-
 }
