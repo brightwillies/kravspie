@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customdate;
+use App\Mail\AnorderMail;
 use App\Mail\PurchaseConfirmation;
 use App\Models\Cart;
 use App\Models\Category;
@@ -21,6 +22,15 @@ use stdClass;
 
 class FrontendController extends Controller
 {
+
+    public function trymail()
+    {
+
+        $dataa = array();
+        $mail = Mail::to('bwboakye@gmail.com')->send(new AnorderMail($dataa));
+
+        return 'done';
+    }
     public function categoryproducts($id)
     {
         $products = Product::where('category_id', $id)->get();
@@ -31,7 +41,6 @@ class FrontendController extends Controller
     //
     public function logout()
     {
-
 
         Session::flush();
 
@@ -60,6 +69,7 @@ class FrontendController extends Controller
 
     public function createPayment(Request $request)
     {
+
         //   $today = strtotime('today');
         // return date("M d", $today);
 
@@ -170,12 +180,13 @@ class FrontendController extends Controller
                 );
 
                 try {
-
-                  $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
+                    $dataa = array();
+                    $mmail = Mail::to('kravs.pastries@gmail.com')->send(new AnorderMail($dataa));
+                    $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
                 } catch (\Throwable $th) {
                     throw $th;
                 }
-                 $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
+                $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
             }
 
             return $result = $api_response->getResult();
