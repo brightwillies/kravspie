@@ -181,7 +181,8 @@ class FrontendController extends Controller
 
                 try {
                     $dataa = array();
-                    $mmail = Mail::to('kravs.pastries@gmail.com')->send(new AnorderMail($dataa));
+                    $mmail = Mail::to('joballard@kravspie.com')->send(new AnorderMail($dataa));
+                    $mmaill = Mail::to('bwboakye@gmail.com')->send(new AnorderMail($dataa));
                     $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
                 } catch (\Throwable $th) {
                     throw $th;
