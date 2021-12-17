@@ -42,6 +42,7 @@ Route::group(['prefix' => 'cart'], function () {
 
 });
 
+Route::get('/try-an-order-mail', [FrontendController::class, 'trymail']);
 Route::get('/fogot-password', [CustomerController::class, 'forgetpass']);
 
 Route::group(['prefix' => 'customer'], function () {
