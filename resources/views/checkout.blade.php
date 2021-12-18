@@ -350,9 +350,9 @@
                                                         <option style="width: 100%;" value="12:00-12:30">12:00-12:30</option>
                                                         <option style="width: 100%;" value="12:30-13:00">12:30-13:00</option>
                                                         <option style="width: 100%;" value="13:00-13:30">13:00-13:30</option>
-                                                        <option style="width: 100%;" value="13:30-14:00">13:30-14:00</option>
+                                                        <option style="width: 100%;" value="13:30-14:00">13:30-14:00</option>-->
                                                         <option style="width: 100%;" value="14:00-14:30">14:00-14:30</option>
-                                                        <option style="width: 100%;" value="14:30-15:00">14:30-15:00</option> -->
+                                                        <option style="width: 100%;" value="14:30-15:00">14:30-15:00</option>
                                                         <option style="width: 100%;" value="15:00-15:30">15:00-15:30
                                                         </option>
                                                         <option style="width: 100%;" value="15:30-16:00">15:30-16:00
@@ -365,10 +365,10 @@
                                                         </option>
                                                         <option style="width: 100%;" value="17:30-18:00">17:30-18:00
                                                         </option>
-                                                        <option style="width: 100%;" value="18:00-18:30">18:00-18:30
+                                                        <!-- <option style="width: 100%;" value="18:00-18:30">18:00-18:30
                                                         </option>
                                                         <option style="width: 100%;" value="18:30-19:00">18:30-19:00
-                                                        </option>
+                                                        </option> -->
                                                     </select>
                                                 </div>
                                             </div><br>
