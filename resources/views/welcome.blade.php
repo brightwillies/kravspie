@@ -73,9 +73,14 @@
                         <div class="hero_content  hero_content2 newme">
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
-                            <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1>
+<div class="text-center">
+<a id="shopbutton" style="margin-top:100px;" class="text-center btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/products/9">Pre-order Now</a>
+
+</div>
+                               <h1 style="margin-top:90px;"  class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> A Ghanaian inspired crust filled with global flavors</h1>
+                            <!-- <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1> -->
                             <!-- <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4> -->
-                            <a id="shopbutton" style="margin-top:40px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/products/9">Pre-order Now</a>
+
                         </div>
                     </div>
                     <div class="col-lg-1"></div>

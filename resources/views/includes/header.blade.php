@@ -36,11 +36,12 @@
                             <div class="welcome_text">
 
 
-                            <p  class="text-center">
+                            <p class="text-center">Store is currently closed from 1st January 2022 to  3rd April 2022</p>
+                            <!-- <p  class="text-center">
                             Attention Shoppers: Pre-order for pickup locally from The Jelly Queens,
                             <a target="_blank"  style="color:#302020;"  href="https://www.google.com/maps/dir//jelly+queens/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x8644d18e8ad497f5:0xc45322eb4ec2b458?sa=X&ved=2ahUKEwjBhd71j9D0AhXGyTgGHYmpBO8Q9Rd6BAhKEAU">
                             McKinney,TX  on December 23 & 24 2021.
-                        </a>  </p>
+                        </a>  </p> -->
                             <!-- <p  class="text-center">Attention Shoppers: Nationwide Shipping Only through GOLDBELLY Website! Preorder On Website Only If You Can Pickup Locally From the <a target="_blank"  style="color:#302020;" href="https://g.page/DFMDallasFarmersMarket_?share">Dallas Farmers Market</a>  , on Saturdays 10am - 3:30pm.</p> -->
                             </div>
 
@@ -52,7 +53,7 @@
                                     <li class="account_link"> <i class="icofont-user-alt-7"></i><a href="#">Account</a>
                                         <ul class="dropdown_account_link">
                                             <!-- <li><a href="/my-account">My Account</a></li> -->
-                                          
+
                                             {!!$check_aut!!}
                                         </ul>
                                     </li>
