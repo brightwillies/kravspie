@@ -34,7 +34,7 @@
         }
     </style>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
 </head>
 
@@ -73,11 +73,11 @@
                         <div class="hero_content  hero_content2 newme">
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
-<div class="text-center">
-<a id="shopbutton" style="margin-top:100px;" class="text-center btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/products/9">Pre-order Now</a>
+                            <div class="text-center">
+                                <a id="shopbutton" style="margin-top:100px;" class="text-center btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/products/9">Pre-order Now</a>
 
-</div>
-                               <h1 style="margin-top:90px;"  class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> A Ghanaian inspired crust filled with global flavors</h1>
+                            </div>
+                            <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> A Ghanaian inspired crust filled with global flavors</h1>
                             <!-- <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1> -->
                             <!-- <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4> -->
 
@@ -171,24 +171,24 @@
 
                 <div class="col-lg-12">
 
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide text-center">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide text-center">
 
-                                    <i style="padding-left: 20px; font-size:25px;">The Almond pie is sooo good </i>
-                                    <h5>Kray W.</h5>
-                                </div>
-                                <div class="swiper-slide text-center">
-
-                                    <i style="padding-left: 20px; font-size:25px;"> Thank you for the delicious pie </i>
-                                    <h5>Priscilla Shirer</h5>
-                                </div>
+                                <i style="padding-left: 20px; font-size:25px;">The Almond pie is sooo good </i>
+                                <h5>Kray W.</h5>
                             </div>
+                            <div class="swiper-slide text-center">
 
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                                <i style="padding-left: 20px; font-size:25px;"> Thank you for the delicious pie </i>
+                                <h5>Priscilla Shirer</h5>
+                            </div>
                         </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
 
                 </div>
             </div>
