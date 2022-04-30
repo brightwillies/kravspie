@@ -74,10 +74,10 @@
                             <h3 class="wow fadeInUp text-white" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             </h3>
                             <div class="text-center">
-                                <a id="shopbutton" style="margin-top:100px;" class="text-center btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/products/9">Pre-order Now</a>
+                                <a id="shopbutton" style="margin-top:100px;" class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="/shop">Pre-order Now for local pickup</a>
 
                             </div>
-                            <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> A Ghanaian inspired crust filled with global flavors</h1>
+                            <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s">HANDMADE GOURMET PIES INSPIRED BY GLOBAL FLAVORS</h1>
                             <!-- <h1 class="wow fadeInUp  backcolor" data-wow-delay="0.2s" data-wow-duration="1.2s"> ‘Tis the season for Gifts!</h1> -->
                             <!-- <h4  style="font-size: 2.5rem;" class="text-center  backcolor">The proof is in the crust !</h4> -->
 
@@ -96,13 +96,14 @@
         <div class="container text-center">
             <div class="product_header">
                 <div class="section_title text-center">
-                    <h2>HANDMADE GOURMET PIES</h2>
+                    <h2>KRAVS TO PIE THE RESCUE</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8">
-                    <p style="font-weight: 600;">We use real butter and the finest quality ingredients to bake pies that are addictive. Pies are flaky on the outside, full on the inside, yummy all the way.</p>
+                    <p style="font-weight: 600;">Pies are flaky on the outside, full and FLAVORFUL on the inside, yummy all the way.</p>
+                    <!-- <p style="font-weight: 600;">We use real butter and the finest quality ingredients to bake pies that are addictive. Pies are flaky on the outside, full on the inside, yummy all the way.</p> -->
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -114,16 +115,16 @@
     <!-- product section start -->
     <div class="product_section mb-80 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
         <div class="container">
-            <div class="product_header">
+            <!-- <div class="product_header">
                 <div class="section_title text-center">
                     <h2>FEATURED PRODUCTS</h2>
                 </div>
-            </div>
+            </div> -->
             <div class="product_gallery">
                 <div class="row">
                     @if($products)
                     @foreach ($products as $key => $product)
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
                         <article class="single_product">
                             <figure>
                                 <div class="product_thumb">
@@ -141,6 +142,7 @@
                                     <div class="price_box">
 
                                     </div>
+                                    <button class="btn btn-danger">Buy Now</button>
                                 </figcaption>
                             </figure>
                         </article>
@@ -159,9 +161,7 @@
 
 
 
-
-    <!-- testimonial section start -->
-    <!-- <div class="testimonial_section mb-110 wow fadeInUp" data-bgimg="/assets/img/bg/eat.jpg" data-wow-delay="0.1s" data-wow-duration="1.1s"> -->
+<!--
     <div class="testimonial_section mb-110 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
         <div class="container">
             <div class="row">
@@ -185,7 +185,7 @@
                             </div>
                         </div>
 
-                        <!-- If we need navigation buttons -->
+
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
@@ -193,10 +193,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- testimonial section start -->
     <!-- <button type="button" onclick="deviceType()"> Click me</button> -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-12 text-center">
                 <h1>In The News</h1>
@@ -220,7 +220,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
     <!-- testimonial section end -->
 
 

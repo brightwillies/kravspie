@@ -199,7 +199,7 @@ class FrontendController extends Controller
     public function index()
     {
 
-        $products = Product::where('featured', 1)->get()->take(3);
+        $products = Product::where('featured', 1)->get()->take(4);
         return view('welcome', compact('products'));
     }
     public function cart()
