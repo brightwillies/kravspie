@@ -36,18 +36,18 @@
                             <div class="welcome_text">
 
 
-                            <p class="text-center">Store is currently closed until May 11, 2022</p>
-                            <!-- <p  class="text-center">
-                            Attention Shoppers: Pre-order for pickup locally from The Jelly Queens,
+                            <!-- <p class="text-center">Store is currently closed until May 11, 2022</p> -->
+                            <p  class="text-center">
+                            Attention Shoppers: Pre-order for pickup locally from
                             <a target="_blank"  style="color:#302020;"  href="https://www.google.com/maps/dir//jelly+queens/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x8644d18e8ad497f5:0xc45322eb4ec2b458?sa=X&ved=2ahUKEwjBhd71j9D0AhXGyTgGHYmpBO8Q9Rd6BAhKEAU">
-                            McKinney,TX  on December 23 & 24 2021.
-                        </a>  </p> -->
+                            665 Country Club Rd, Lucas, TX 75002.
+                        </a>  </p>
                             <!-- <p  class="text-center">Attention Shoppers: Nationwide Shipping Only through GOLDBELLY Website! Preorder On Website Only If You Can Pickup Locally From the <a target="_blank"  style="color:#302020;" href="https://g.page/DFMDallasFarmersMarket_?share">Dallas Farmers Market</a>  , on Saturdays 10am - 3:30pm.</p> -->
                             </div>
 
                             <div class="header_top_sidebar d-flex align-items-center">
                                 <ul class="d-flex">
-                                    <li><i class="icofont-phone"></i> <a href="tel:+4693644405">+14693644405</a>
+                                    <li><i class="icofont-phone"></i> <a href="tel:+4693644405">+1(469) 364-4405</a>
                                     </li>
 
                                     <li class="account_link"> <i class="icofont-user-alt-7"></i><a href="#">Account</a>
@@ -82,7 +82,7 @@
                                     <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Pre-Order</a></li>
                                     <li><a class="{{ (request()->is('contact-us')) ? 'active' : '' }}"  href="/contact-us">Contact</a></li>
 
-                                    <li><a  target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0">NationWide Delivery</a></li>
+                                    <li><a  target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0"> <strong style="font-size:18px; font-weight: 800 !important;" > NationWide Delivery </strong></a></li>
 
                                 </ul>
                             </nav>
