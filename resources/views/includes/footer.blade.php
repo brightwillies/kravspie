@@ -1,12 +1,73 @@
+<div class="container" id="subscribediv">
+    <div class="row">
+
+        <div class="col-lg-12 text-center">
+            <h3 id="colorwrite">Want to make sure you'll always hear all the latest pie gossip ?</h3>
+        </div>
+    </div>
+    <div class="row text-center" id="labelcol">
+<div class="col-lg-2"></div>
+        <div class="col-lg-4">
+            <input placeholder="jane@gmail.com"  id="ip1" type="text">
+        </div>
+        <div class="col-lg-4">
+            <button  type="button"  class="btnround"> Subscribe</button>
+        </div>
+    </div>
+</div>
+<div class="container" id="bakedcon">
+    <div class="row">
+
+        <div class="col-lg-12 text-center">
+            <h2 id="colorwine">Fresh Baked pies, shipped nationwide .</h2>
+            <p style="font-size: 20px;">Enjoy some pie, delivered right to your doorstep via our partners at Goldbelly</p>
+                  <button  type="button" id="shipmebutton">Ship me some pie ! </button>
+        </div>
+    </div>
+
+</div>
+
 <footer class="footer_widgets">
+
+    <div class="container">
+        <div class="shipping_area">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <img width="250px" height="30px" src="/assets/img/logo/logoo.png" alt="">
+
+                </div>
+                <div class="col-lg-4 padtop">
+                    <div class="copyright_right text-center">
+                        <p> © 2021 <a href="/"> kravspie.com </a> </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 padtop">
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg">FaceBook</div>
+                        <div class="col-lg">Instagram</div>
+                        <div class="col-lg">Contact Us</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</footer>
+
+
+
+<!-- <footer class="footer_widgets">
     <div class="container">
         <div class="shipping_area">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single_shipping d-flex align-items-center">
-                        <!-- <div class="shipping_icon">
-                                <img src="/assets/img/others/shipping1.png" alt="">
-                            </div> -->
+
                         <div class="shipping_text">
                             <h3>For Nationwide Shipping</h3>
                             <p> <a target="_blank" href="https://www.goldbelly.com/kravs-pie"> Order on GOLDBELLY </a></p>
@@ -15,9 +76,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single_shipping d-flex align-items-center">
-                        <!-- <div class="shipping_icon">
-                                <img src="/assets/img/others/shipping2.png" alt="">
-                            </div> -->
+
                         <div class="shipping_text">
                             <h3>Pickups on Saturdays</h3>
                             <p>10:00am - 3:30pm</p>
@@ -26,19 +85,17 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single_shipping d-flex align-items-center">
-                        <!-- <div class="shipping_icon">
-                                <img src="/assets/img/others/shipping3.png" alt="">
-                            </div> -->
+
                         <div class="shipping_text">
                             <h3>
-                            <a target="_blank" href="/policy">
-                            Shipping Policy
-                            </a>
+                                <a target="_blank" href="/policy">
+                                    Shipping Policy
+                                </a>
                             </h3>
                             <h3>
-                            <a target="_blank" href="/terms">
-                            Terms of Service
-                            </a>
+                                <a target="_blank" href="/terms">
+                                    Terms of Service
+                                </a>
                             </h3>
 
                         </div>
@@ -54,8 +111,6 @@
                             <h3>Contact Us</h3>
                             <div class="footer_contact_desc">
                                 <p></p>
-                                <!-- <p>If you have any question.please
-                                        contact us at <a href="#">info@kravspie.com</a></p> -->
                             </div>
                             <div class="footer_contact_info">
                                 <div class="footer_contact_info_list d-flex align-items-center">
@@ -97,7 +152,6 @@
                                 <h3>Account</h3>
                                 <div class="footer_menu">
                                     <ul>
-                                        <!-- <li><a href="/my-account"> My account</a></li> -->
                                         <li><a href="/login-register"> Login/Register</a></li>
 
 
@@ -136,4 +190,4 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
