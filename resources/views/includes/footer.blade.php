@@ -2,16 +2,16 @@
     <div class="row">
 
         <div class="col-lg-12 text-center">
-            <h3 id="colorwrite">Want to make sure you'll always hear all the latest pie gossip ?</h3>
+            <h3 id="colorwrite">Don’t be sliced out of the latest pie news ?</h3>
         </div>
     </div>
     <div class="row text-center" id="labelcol">
-<div class="col-lg-2"></div>
+        <div class="col-lg-2"></div>
         <div class="col-lg-4">
-            <input placeholder="jane@gmail.com"  id="ip1" type="text">
+            <input placeholder="jane@gmail.com" id="ip1" type="text">
         </div>
         <div class="col-lg-4">
-            <button  type="button"  class="btnround"> Subscribe</button>
+            <button type="button" class="btnround"> Subscribe</button>
         </div>
     </div>
 </div>
@@ -19,13 +19,39 @@
     <div class="row">
 
         <div class="col-lg-12 text-center">
-            <h2 id="colorwine">Fresh Baked pies, shipped nationwide .</h2>
+            <h2 id="colorwine">Freshly baked pies, shipped right to your doorstep.</h2>
             <p style="font-size: 20px;">Enjoy some pie, delivered right to your doorstep via our partners at Goldbelly</p>
-                  <button  type="button" id="shipmebutton">Ship me some pie ! </button>
+            <a target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0">
+                <button type="button" id="shipmebutton">Ship me some pie ! </button>
+            </a>
         </div>
     </div>
 
 </div>
+
+<div class="container" style="margin-top:20px;">
+    <div class="row">
+        <div class="col-lg-12 text-center" id="eventnotice">
+            <h3>COMING TO AN EVENT NEAR YOU</h3>
+        </div>
+        <div class="col-lg-4">
+            <img width="400px" height="300px" src="/assets/img/bg/events.jpg" alt="">
+        </div>
+        <div class="col-lg-8" id="borderdiv" style="padding-left:30px;">
+            <h5 id="eventnotice"> Lucas Farmers Market</h5>
+            <h5 id="eventnotice">665 Country Club Rd, Lucas, TX 75002 </h5>
+            <h5 id="eventnotice">May 14th & May 28th </h5>
+            <h5 id="eventnotice">8am – 12 noon </h5>
+<hr style="margin-top:30px; margin-bottom:30px;">
+<div class="eventnotice"></div>
+            <h5 id="eventnotice">The Dallas Arboretum and Botanical Garden</h5>
+            <h5 id="eventnotice">8525 Garland Rd, Dallas, TX 75218 </h5>
+            <h5 id="eventnotice">May 14th & 15th  </h5>
+            <h5 id="eventnotice">10am-4pm  </h5>
+        </div>
+    </div>
+</div>
+
 
 <footer class="footer_widgets">
 

@@ -321,7 +321,7 @@
                                             </div><br>
                                             <div id="card-container"></div>
                                             <div class="order-button-payment">
-                                                <!-- <button id="card-button" style="width: 100%;" class="btn btn-primary" type="button">Pay ${{number_format($cartSum, 2, '.', '')}}</button> -->
+                                                <button id="card-button" style="width: 100%;" class="btn btn-primary" type="button">Pay ${{number_format($cartSum, 2, '.', '')}}</button>
                                             </div>
                                             <input type="hidden" name="token" id="token" value="{{ csrf_token() }}" />
                                             <input type="hidden" id="amountt" name="amountt" value="{{$cartSum}}">
