@@ -142,7 +142,9 @@
                                     <div class="price_box">
 
                                     </div>
+                                    <a href="/products/{{$product->id}}">
                                     <button class="btn btn-danger">Buy Now</button>
+                                    </a>
                                 </figcaption>
                             </figure>
                         </article>
