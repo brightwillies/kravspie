@@ -52,7 +52,7 @@ class FrontendController extends Controller
     {
 
         $product = Product::find($id);
-        $products = Product::where('id', '<>', $id)->get()->take(4);
+        $products = Product::where('id', '<>', $id)->where('status', 1)->get()->take(4);
         return view('singleproduct', compact('product', 'products'));
     }
     public function about()
@@ -63,7 +63,7 @@ class FrontendController extends Controller
     {
 
         $categories = Category::all();
-        $products = Product::all();
+        $products = Product::where('status', 1)->get();
         return view('shop', compact('products', 'categories'));
     }
 
