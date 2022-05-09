@@ -72,8 +72,14 @@
                 <div class="col-lg-4 padtop">
                     <div class="row">
                         <div class="col-lg-2"></div>
-                        <div class="col-lg">FaceBook</div>
-                        <div class="col-lg">Instagram</div>
+                        <div class="col-lg">
+                        <a href="https://web.facebook.com/kravspie" target="_blank" rel="noopener noreferrer">
+                        FaceBook</div>
+</a>
+                        <div class="col-lg">
+                        <a href="https://www.instagram.com/kravs_pie/" target="_blank" rel="noopener noreferrer">
+                        Instagram</div>
+                        </a>
                         <div class="col-lg">Contact Us</div>
                     </div>
                 </div>

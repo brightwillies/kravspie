@@ -96,7 +96,7 @@
         <div class="container text-center">
             <div class="product_header">
                 <div class="section_title text-center">
-                    <h2>KRAVS TO PIE THE RESCUE</h2>
+                    <h2>KRAVS TO THE PIE RESCUE</h2>
                 </div>
             </div>
             <div class="row">
