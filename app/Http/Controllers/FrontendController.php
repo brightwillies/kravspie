@@ -33,7 +33,7 @@ class FrontendController extends Controller
     }
     public function categoryproducts($id)
     {
-        $products = Product::where('category_id', $id)->get();
+        $products = Product::where('category_id', $id)->where('status', 1)->get();
         $categories = Category::all();
 
         return view('shop', compact('products', 'categories'));
@@ -184,7 +184,7 @@ class FrontendController extends Controller
                     $mmail = Mail::to('joballard@kravspie.com')->send(new AnorderMail($dataa));
                     $mmaill = Mail::to('bwboakye@gmail.com')->send(new AnorderMail($dataa));
                     $mail = Mail::to($findCustomer->email)->send(new PurchaseConfirmation($data));
-                } catch (\Throwable $th) {
+                } catch (\Throwable$th) {
                     throw $th;
                 }
                 $getTemporalCartProducts = Cart::Where('customer_id', $customerSessionID)->delete();
