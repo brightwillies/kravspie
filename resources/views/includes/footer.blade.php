@@ -29,29 +29,6 @@
 
 </div>
 
-<div class="container" style="margin-top:20px;">
-    <div class="row">
-        <div class="col-lg-12 text-center" id="eventnotice">
-            <h3>COMING TO AN EVENT NEAR YOU</h3>
-        </div>
-        <div class="col-lg-4">
-            <img width="400px" height="300px" src="/assets/img/bg/events.jpg" alt="">
-        </div>
-        <div class="col-lg-8" id="borderdiv" style="padding-left:30px;">
-            <h5 id="eventnotice"> Lucas Farmers Market</h5>
-            <h5 id="eventnotice">665 Country Club Rd, Lucas, TX 75002 </h5>
-            <h5 id="eventnotice">May 14th & May 28th </h5>
-            <h5 id="eventnotice">8am – 12 noon </h5>
-<hr style="margin-top:30px; margin-bottom:30px;">
-<div class="eventnotice"></div>
-            <h5 id="eventnotice">The Dallas Arboretum and Botanical Garden</h5>
-            <h5 id="eventnotice">8525 Garland Rd, Dallas, TX 75218 </h5>
-            <h5 id="eventnotice">May 14th & 15th  </h5>
-            <h5 id="eventnotice">10am-4pm  </h5>
-        </div>
-    </div>
-</div>
-
 
 <footer class="footer_widgets">
 
@@ -63,13 +40,13 @@
                     <img width="250px" height="30px" src="/assets/img/logo/logoo.png" alt="">
 
                 </div>
-                <div class="col-lg-4 padtop">
+                <div class="col-lg-2 padtop">
                     <div class="copyright_right text-center">
                         <p> © 2021 <a href="/"> kravspie.com </a> </p>
 
                     </div>
                 </div>
-                <div class="col-lg-4 padtop">
+                <div class="col-lg-6 padtop">
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg">
@@ -85,6 +62,11 @@
                     </div>
 
                         <div class="col-lg">Contact Us</div>
+                        <div class="col-lg">
+                        <a href="/event">
+                        Events
+                        </a>
+                    </div>
                     </div>
                 </div>
             </div>

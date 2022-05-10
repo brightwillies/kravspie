@@ -23,6 +23,12 @@ use stdClass;
 class FrontendController extends Controller
 {
 
+    public function event()
+    {
+
+        return view('events');
+    }
+
     public function trymail()
     {
 

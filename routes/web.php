@@ -59,6 +59,7 @@ Route::get('/about-us', [FrontendController::class, 'about']);
 Route::get('/my-cart', [FrontendController::class, 'cart']);
 Route::get('/checkout', [FrontendController::class, 'checkout']);
 Route::get('/shop', [FrontendController::class, 'shop']);
+Route::get('/event', [FrontendController::class, 'event']);
 
 Route::post('/payment', [FrontendController::class, 'createPayment']);
 Route::get('/admin-login', [DashboardController::class, 'admin']);

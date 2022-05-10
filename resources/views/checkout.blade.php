@@ -281,8 +281,11 @@
                                         <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
                                             <div class="card-body">
                                                 <p class="mb-3">
-                                                    Place the order Only If You Can Pickup Locally From <a target="_blank" href="https://www.google.com/maps/dir//jelly+queens/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x8644d18e8ad497f5:0xc45322eb4ec2b458?sa=X&ved=2ahUKEwjBhd71j9D0AhXGyTgGHYmpBO8Q9Rd6BAhKEAU
-                                                 "><b>The Jelly Queens, McKinney,TX on December 23 & 24 </b> </a>
+
+                                                    Place the order Only If You Can Pickup Locally From <a target="_blank"
+
+                                                    href="https://www.google.com/maps/place/665+Country+Club+Rd,+Lucas,+TX+75002,+USA/@33.0934036,-96.5963304,17z/data=!3m1!4b1!4m5!3m4!1s0x864c107241af3093:0x9e62376278716331!8m2!3d33.0934036!4d-96.5941417"
+><b>665 Century Club Rd, Lucas, TX 75002 for Lucas Farmers Market </b> </a>
                                                 </p>
                                             </div>
                                         </div>
@@ -343,15 +346,15 @@
                                                     <label for="pickupdate">Choose Pickup Time:</label><br>
 
                                                     <select class="custom-select" name="timedate" id="pickuptime">
-                                                        <!-- <option style="width: 100%;" value="10:00-10:30">10:00-10:30</option>
+                                                        <option style="width: 100%;" value="08:00-08:30">08:00-08:30</option>
+                                                        <option style="width: 100%;" value="08:30-09:00">08:30-09:00</option>
+                                                        <option style="width: 100%;" value="09:00-09:30">09:00-09:30</option>
+                                                        <option style="width: 100%;" value="09:30-10:00">09:30-10:00</option>
+                                                        <option style="width: 100%;" value="10:00-10:30">10:00-10:30</option>
                                                         <option style="width: 100%;" value="10:30-11:00">10:30-11:00</option>
                                                         <option style="width: 100%;" value="11:00-11:30">11:00-11:30</option>
                                                         <option style="width: 100%;" value="11:30-12:00">11:30-12:00</option>
-                                                        <option style="width: 100%;" value="12:00-12:30">12:00-12:30</option>
-                                                        <option style="width: 100%;" value="12:30-13:00">12:30-13:00</option>
-                                                        <option style="width: 100%;" value="13:00-13:30">13:00-13:30</option>
-                                                        <option style="width: 100%;" value="13:30-14:00">13:30-14:00</option>-->
-                                                        <option style="width: 100%;" value="14:00-14:30">14:00-14:30</option>
+                                                        <!-- <option style="width: 100%;" value="14:00-14:30">14:00-14:30</option>
                                                         <option style="width: 100%;" value="14:30-15:00">14:30-15:00</option>
                                                         <option style="width: 100%;" value="15:00-15:30">15:00-15:30
                                                         </option>
@@ -363,7 +366,7 @@
                                                         </option>
                                                         <option style="width: 100%;" value="17:00-17:30">17:00-17:30
                                                         </option>
-                                                        <option style="width: 100%;" value="17:30-18:00">17:30-18:00
+                                                        <option style="width: 100%;" value="17:30-18:00">17:30-18:00 -->
                                                         </option>
                                                         <!-- <option style="width: 100%;" value="18:00-18:30">18:00-18:30
                                                         </option>

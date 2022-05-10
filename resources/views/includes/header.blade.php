@@ -39,7 +39,7 @@
                             <!-- <p class="text-center">Store is currently closed until May 11, 2022</p> -->
                             <p  class="text-center">
                             Attention Shoppers: Pre-order for pickup locally from
-                            <a target="_blank"  style="color:#302020;"  href="https://www.google.com/maps/dir//jelly+queens/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x8644d18e8ad497f5:0xc45322eb4ec2b458?sa=X&ved=2ahUKEwjBhd71j9D0AhXGyTgGHYmpBO8Q9Rd6BAhKEAU">
+                            <a target="_blank"  style="color:#302020;"  href="https://www.google.com/maps/place/665+Country+Club+Rd,+Lucas,+TX+75002,+USA/@33.0934036,-96.5963304,17z/data=!3m1!4b1!4m5!3m4!1s0x864c107241af3093:0x9e62376278716331!8m2!3d33.0934036!4d-96.5941417">
                             665 Country Club Rd, Lucas, TX 75002.
                         </a>  </p>
                             <!-- <p  class="text-center">Attention Shoppers: Nationwide Shipping Only through GOLDBELLY Website! Preorder On Website Only If You Can Pickup Locally From the <a target="_blank"  style="color:#302020;" href="https://g.page/DFMDallasFarmersMarket_?share">Dallas Farmers Market</a>  , on Saturdays 10am - 3:30pm.</p> -->
@@ -81,6 +81,7 @@
                                     <li><a  class="{{ (request()->is('about-us')) ? 'active' : '' }}" href="/about-us">About</a></li>
                                     <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Pre-Order</a></li>
                                     <li><a class="{{ (request()->is('contact-us')) ? 'active' : '' }}"  href="/contact-us">Contact</a></li>
+                                    <li><a class="{{ (request()->is('event')) ? 'active' : '' }}"  href="/event">Event</a></li>
 
                                     <li><a  target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0"> <strong style="font-size:18px; font-weight: 800 !important;" > NationWide Delivery </strong></a></li>
 
