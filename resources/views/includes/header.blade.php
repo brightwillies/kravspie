@@ -81,7 +81,7 @@
                                     <li><a  class="{{ (request()->is('about-us')) ? 'active' : '' }}" href="/about-us">About</a></li>
                                     <li><a  class="{{ (request()->is('shop')) ? 'active' : '' }}"   href="/shop">Pre-Order</a></li>
                                     <li><a class="{{ (request()->is('contact-us')) ? 'active' : '' }}"  href="/contact-us">Contact</a></li>
-                                    <li><a class="{{ (request()->is('event')) ? 'active' : '' }}"  href="/event">Event</a></li>
+                                    <li><a class="{{ (request()->is('event')) ? 'active' : '' }}"  href="/event">Events</a></li>
 
                                     <li><a  target="_blank" href="https://www.goldbelly.com/kravs-pie?__cf_chl_jschl_tk__=REcGOEP7hQz0HuRaKgt11guaxP2_mQUxyX7d21DvTK8-1636890421-0-gaNycGzNCL0"> <strong style="font-size:18px; font-weight: 800 !important;" > NationWide Delivery </strong></a></li>
 
